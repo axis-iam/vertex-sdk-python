@@ -19,7 +19,7 @@ from axis_vertex.permission_manifest import (
 )
 
 SHARED_FIXTURE = json.loads(
-    (Path(__file__).parents[2] / "docs/fixtures/permission-manifest-vectors.json").read_text()
+    (Path(__file__).parent / "fixtures/permission-manifest-vectors.json").read_text()
 )
 
 

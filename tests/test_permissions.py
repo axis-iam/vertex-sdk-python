@@ -50,7 +50,7 @@ def test_parse_permission_rejects_malformed_values() -> None:
 
 def test_consumes_shared_wildcard_vectors() -> None:
     fixture = json.loads(
-        (Path(__file__).parents[2] / "docs/fixtures/permission-manifest-vectors.json").read_text()
+        (Path(__file__).parent / "fixtures/permission-manifest-vectors.json").read_text()
     )
     for vector in fixture["codeGeneration"]["wildcardMatch"]:
         target = parse_permission(vector["target"])
