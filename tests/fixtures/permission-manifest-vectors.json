@@ -1,0 +1,159 @@
+{
+  "vectors": [
+    {
+      "name": "empty",
+      "permissions": [],
+      "canonicalManifest": "{\"permissions\":[]}",
+      "fingerprint": "a4475f102675fe599e2e1184f669b9246b7ebe113c351d514e635018a1f53cf8"
+    },
+    {
+      "name": "null-description",
+      "permissions": [
+        {"resource": "posts", "action": "read", "name": "Read posts", "description": null}
+      ],
+      "canonicalManifest": "{\"permissions\":[{\"action\":\"read\",\"description\":null,\"name\":\"Read posts\",\"resource\":\"posts\"}]}",
+      "fingerprint": "bd2036720114f62abecb2850b61c165763a9cf1ee3736eab2bd59b9646aae9b5"
+    },
+    {
+      "name": "nfc",
+      "permissions": [
+        {"resource": "orders", "action": "write", "name": "Café", "description": "café/日"}
+      ],
+      "canonicalManifest": "{\"permissions\":[{\"action\":\"write\",\"description\":\"café/日\",\"name\":\"Café\",\"resource\":\"orders\"}]}",
+      "fingerprint": "f83e6aa8deb4e0ac18c86dff2c094dc182b065ea088dc2a2a1b1041f48936ec4",
+      "declarationRevision": "c51790540d9d86b1c95f6a7b51b29d15ce1b794f656203b09664423d94b55974"
+    }
+  ],
+  "localReject": [
+    "duplicate-resource-action-key",
+    "non-nfc-string",
+    "malformed-or-wildcard-key",
+    "name-over-128-utf16-units",
+    "description-over-512-utf16-units"
+  ],
+  "responseReject": [
+    "unknown-result-enum",
+    "missing-required-field",
+    "wrong-counts",
+    "malformed-json",
+    "duplicate-json-member-where-supported"
+  ],
+  "manifestFiles": {
+    "accept": [
+      {
+        "name": "single-exact-structured-manifest",
+        "json": "{\"manifestId\":\"orders-api\",\"revision\":\"1\",\"permissions\":[{\"resource\":\"posts\",\"action\":\"read\",\"name\":\"Read posts\",\"description\":null}]}"
+      }
+    ],
+    "reject": [
+      {
+        "name": "duplicate-top-level-member",
+        "json": "{\"manifestId\":\"orders-api\",\"manifestId\":\"other\",\"revision\":\"1\",\"permissions\":[]}"
+      },
+      {
+        "name": "duplicate-declaration-member",
+        "json": "{\"manifestId\":\"orders-api\",\"revision\":\"1\",\"permissions\":[{\"resource\":\"posts\",\"resource\":\"users\",\"action\":\"read\",\"name\":\"Read\",\"description\":null}]}"
+      },
+      {
+        "name": "unknown-top-level-field",
+        "json": "{\"manifestId\":\"orders-api\",\"revision\":\"1\",\"permissions\":[],\"fallback\":true}"
+      },
+      {
+        "name": "unknown-declaration-field",
+        "json": "{\"manifestId\":\"orders-api\",\"revision\":\"1\",\"permissions\":[{\"resource\":\"posts\",\"action\":\"read\",\"name\":\"Read\",\"description\":null,\"fallback\":true}]}"
+      },
+      {
+        "name": "wrong-case-top-level-field",
+        "json": "{\"ManifestId\":\"orders-api\",\"revision\":\"1\",\"permissions\":[]}"
+      },
+      {
+        "name": "wrong-case-declaration-field",
+        "json": "{\"manifestId\":\"orders-api\",\"revision\":\"1\",\"permissions\":[{\"Resource\":\"posts\",\"action\":\"read\",\"name\":\"Read\",\"description\":null}]}"
+      },
+      {
+        "name": "trailing-second-json-value",
+        "json": "{\"manifestId\":\"orders-api\",\"revision\":\"1\",\"permissions\":[]} {\"manifestId\":\"other\",\"revision\":\"1\",\"permissions\":[]}"
+      }
+    ]
+  },
+  "retry": {
+    "statuses": [408, 429, 502, 503, 504],
+    "terminalStatuses": [400, 401, 403, 404, 409, 413, 422],
+    "validRetryAfterSeconds": [1, 12, 86400],
+    "invalidRetryAfter": ["0", "86401", "Wed, 21 Oct 2015 07:28:00 GMT", "invalid"]
+  },
+  "rules": {
+    "nonNfc": "reject-without-normalization",
+    "description": "required-key-nullable-value",
+    "sorting": "resource:action ascending by deterministic string order",
+    "fingerprint": "lowercase SHA-256 of canonicalManifest UTF-8 bytes"
+  },
+  "codeGeneration": {
+    "permissions": [
+      {"resource": "billing-events", "action": "view_detail", "name": "View billing events", "description": "Quotes: \" and slash: \\"},
+      {"resource": "orders", "action": "create", "name": "Create orders", "description": null},
+      {"resource": "orders", "action": "read", "name": "Read orders", "description": "Café / 日"}
+    ],
+    "expectedNames": {
+      "typescript": ["BILLING_EVENTS_VIEW_DETAIL", "ORDERS_CREATE", "ORDERS_READ"],
+      "java": ["BILLING_EVENTS_VIEW_DETAIL", "ORDERS_CREATE", "ORDERS_READ"],
+      "go": ["BillingEventsViewDetail", "OrdersCreate", "OrdersRead"],
+      "python": ["BILLING_EVENTS_VIEW_DETAIL", "ORDERS_CREATE", "ORDERS_READ"]
+    },
+    "reject": [
+      {
+        "name": "duplicate-resource-action-key",
+        "classification": "DUPLICATE_KEY",
+        "permissions": [
+          {"resource": "orders", "action": "read", "name": "Read orders", "description": null},
+          {"resource": "orders", "action": "read", "name": "Read orders again", "description": null}
+        ]
+      },
+      {
+        "name": "non-nfc-string",
+        "classification": "NON_NFC",
+        "permissions": [
+          {"resource": "orders", "action": "read", "name": "Café", "description": null}
+        ]
+      },
+      {
+        "name": "malformed-key",
+        "classification": "MALFORMED_KEY",
+        "permissions": [
+          {"resource": "Orders", "action": "read", "name": "Read orders", "description": null}
+        ]
+      },
+      {
+        "name": "resource-wildcard-key",
+        "classification": "WILDCARD_KEY",
+        "permissions": [
+          {"resource": "orders", "action": "*", "name": "All order actions", "description": null}
+        ]
+      },
+      {
+        "name": "global-wildcard-key",
+        "classification": "WILDCARD_KEY",
+        "permissions": [
+          {"resource": "*", "action": "*", "name": "All permissions", "description": null}
+        ]
+      },
+      {
+        "name": "generated-name-collision",
+        "classification": "NAME_COLLISION",
+        "permissions": [
+          {"resource": "billing-events", "action": "read", "name": "Read billing events", "description": null},
+          {"resource": "billing_events", "action": "read", "name": "Read billing events", "description": null}
+        ]
+      }
+    ],
+    "wildcardMatch": [
+      {"target": "orders:read", "granted": "orders:read", "matches": true},
+      {"target": "orders:read", "granted": "orders:*", "matches": true},
+      {"target": "orders:read", "granted": "*:*", "matches": true},
+      {"target": "orders:read", "granted": "users:*", "matches": false},
+      {"target": "orders:read", "granted": "*:read", "matches": false},
+      {"target": "orders:read", "granted": "orders", "matches": false}
+    ]
+  }
+}
+

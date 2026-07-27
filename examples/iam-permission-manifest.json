@@ -1,0 +1,1 @@
+{"manifestId":"fastapi-demo","revision":"1","permissions":[{"resource":"orders","action":"create","name":"Create orders","description":null}]}

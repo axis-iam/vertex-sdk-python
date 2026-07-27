@@ -1,0 +1,43 @@
+name: publish beta
+
+on:
+  workflow_dispatch:
+    inputs:
+      reviewed_commit:
+        description: Exact reviewed main commit SHA containing the 0.1.0 candidates
+        required: true
+        type: string
+      publish:
+        description: Publish the reviewed 0.1.0 artifacts to PyPI
+        required: true
+        default: false
+        type: boolean
+
+jobs:
+  build-and-check:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    environment: pypi
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify reviewed main commit and distribution version
+        env:
+          REVIEWED_COMMIT: ${{ inputs.reviewed_commit }}
+        run: |
+          test "$GITHUB_REF" = "refs/heads/main"
+          test -n "$REVIEWED_COMMIT"
+          test "$REVIEWED_COMMIT" = "$GITHUB_SHA"
+          test "$(git rev-parse HEAD)" = "$REVIEWED_COMMIT"
+          python -c "import pathlib,tomllib; project=tomllib.loads(pathlib.Path('pyproject.toml').read_text())['project']; assert project['name']=='axis-iam-vertex' and project['version']=='0.1.0'"
+      - run: python -m pip install --upgrade build twine
+      - run: python -m build
+      - run: python -m twine check dist/*
+      - name: Publish through the configured PyPI trusted publisher
+        if: ${{ inputs.publish && github.ref == 'refs/heads/main' && inputs.reviewed_commit == github.sha }}
+        uses: pypa/gh-action-pypi-publish@release/v1

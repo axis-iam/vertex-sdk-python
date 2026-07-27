@@ -1,0 +1,57 @@
+{
+  "snapshot": {
+    "valid": {
+      "applicationId": "123e4567-e89b-42d3-a456-426614174000",
+      "clientId": "orders-service",
+      "roles": [
+        {"key": "admin", "name": "Admin", "permissions": ["orders:read", "orders:*", "*:*"]},
+        {"key": "viewer", "name": "Viewer", "permissions": ["orders:read"]}
+      ]
+    },
+    "expectedPermissions": ["orders:read", "orders:*", "*:*"] ,
+    "rawReject": [
+      {"name":"duplicate-top-level","body":"{\"applicationId\":\"123e4567-e89b-42d3-a456-426614174000\",\"clientId\":\"orders-service\",\"clientId\":\"orders-service\",\"roles\":[]}"},
+      {"name":"duplicate-nested","body":"{\"applicationId\":\"123e4567-e89b-42d3-a456-426614174000\",\"clientId\":\"orders-service\",\"roles\":[{\"key\":\"admin\",\"key\":\"admin\",\"name\":\"Admin\",\"permissions\":[]}]}"},
+      {"name":"trailing-object","body":"{\"applicationId\":\"123e4567-e89b-42d3-a456-426614174000\",\"clientId\":\"orders-service\",\"roles\":[]} {}"},
+      {"name":"trailing-scalar","body":"{\"applicationId\":\"123e4567-e89b-42d3-a456-426614174000\",\"clientId\":\"orders-service\",\"roles\":[]} true"},
+      {"name":"empty","body":""},
+      {"name":"truncated","body":"{\"applicationId\":\"123e4567-e89b-42d3-a456-426614174000\",\"clientId\":\"orders-service\",\"roles\":["}
+    ],
+    "reject": [
+      {"name":"top-level-permissions","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","permissions":[]}},
+      {"name":"missing-required-field","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service"}},
+      {"name":"unknown-top-level-field","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[],"fallback":true}},
+      {"name":"unknown-role-field","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":[],"fallback":true}]}},
+      {"name":"duplicate-role-key","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":[]},{"key":"admin","name":"Other","permissions":[]}]}},
+      {"name":"duplicate-permission-in-role","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":["orders:read","orders:read"]}]}},
+      {"name":"malformed-permission-key","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":["orders"]}]}},
+      {"name":"resource-agnostic-action-wildcard","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":["*:read"]}]}},
+      {"name":"multiple-colons","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":["orders:read:extra"]}]}},
+      {"name":"uppercase-permission","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":["Orders:read"]}]}},
+      {"name":"invalid-permission-character","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":["orders.read"]}]}},
+      {"name":"non-string-permission","body":{"applicationId":"123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[{"key":"admin","name":"Admin","permissions":[42]}]}},
+      {"name":"non-uuid-application-id","body":{"applicationId":"app","clientId":"orders-service","roles":[]}},
+      {"name":"uppercase-uuid","body":{"applicationId":"123E4567-E89B-42D3-A456-426614174000","clientId":"orders-service","roles":[]}},
+      {"name":"compact-uuid","body":{"applicationId":"123e4567e89b42d3a456426614174000","clientId":"orders-service","roles":[]}},
+      {"name":"urn-uuid","body":{"applicationId":"urn:uuid:123e4567-e89b-42d3-a456-426614174000","clientId":"orders-service","roles":[]}},
+      {"name":"braced-uuid","body":{"applicationId":"{123e4567-e89b-42d3-a456-426614174000}","clientId":"orders-service","roles":[]}}
+    ]
+  },
+  "resolve": {
+    "valid": {"permissions": ["orders:read", "orders:*", "*:*"]},
+    "reject": [
+      {"name":"missing-permissions","body":{}},
+      {"name":"unknown-field","body":{"permissions":[],"fallback":true}},
+      {"name":"duplicate-permission","body":{"permissions":["orders:read","orders:read"]}},
+      {"name":"malformed-permission-key","body":{"permissions":["orders"]}},
+      {"name":"resource-agnostic-action-wildcard","body":{"permissions":["*:read"]}},
+      {"name":"multiple-colons","body":{"permissions":["orders:read:extra"]}},
+      {"name":"uppercase-permission","body":{"permissions":["Orders:read"]}},
+      {"name":"invalid-permission-character","body":{"permissions":["orders.read"]}},
+      {"name":"non-string-permission","body":{"permissions":[42]}}
+    ],
+    "zeroRole": {"permissions": [], "networkRequests": 0}
+  },
+  "status": [401, 403, 404, 500]
+}
+
