@@ -18,6 +18,7 @@ import jwt
 from .claims import IamClaims
 from .config import IamConfig
 from .context import IamContext, IamUser
+from .current_user import CurrentUser
 from .errors import IamApiError, UnauthorizedError
 from .permissions import PermissionDefinition
 from .profile import (
@@ -139,6 +140,23 @@ class IamClient:
         )
         return permissions
 
+    async def get_current_user(self, access_token: str) -> CurrentUser:
+        """Read GET /api/v1/auth/me safely; profile metadata grants no permissions."""
+        token = _normalize_bearer(access_token)
+        if not token:
+            raise UnauthorizedError("bearer token is required")
+        response = await self._http.get(
+            f"{self.config.endpoint}/api/v1/auth/me",
+            headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
+        )
+        if not 200 <= response.status_code < 300:
+            raise IamApiError(response.status_code, "Current-user request failed")
+        return CurrentUser.from_mapping(response.json())
+
+    def get_current_user_sync(self, access_token: str) -> CurrentUser:
+        """Explicit synchronous current-user wrapper."""
+        return _run_sync(self.get_current_user(access_token))
+
     async def get_me(self, access_token: str, *, bypass_cache: bool = False) -> UserProfile:
         """Return the current user's profile from ``GET /api/v1/auth/me/profile``."""
 
@@ -161,7 +179,6 @@ class IamClient:
         self,
         access_token: str,
         *,
-        username: str | None = None,
         display_name: str | None = None,
         avatar_url: str | None = None,
     ) -> UserProfile:
@@ -173,7 +190,6 @@ class IamClient:
         body = {
             key: value
             for key, value in {
-                "username": username,
                 "displayName": display_name,
                 "avatarUrl": avatar_url,
             }.items()
@@ -303,17 +319,15 @@ class IamClient:
             raise UnauthorizedError("bearer token is required")
         await self._request("DELETE", "/api/v1/auth/sessions", bearer=token, expect_json=False)
 
-    async def logout_account(self, access_token: str, *, refresh_token: str | None = None) -> None:
-        """Log out the current token/session and optionally revoke a refresh token."""
+    async def logout_account(self, access_token: str) -> None:
+        """Revoke the authenticated OAuth token and session."""
 
         token = _normalize_bearer(access_token)
         if not token:
             raise UnauthorizedError("bearer token is required")
-        body = {"refresh_token": refresh_token} if refresh_token else None
         await self._request(
             "POST",
             "/api/v1/auth/logout",
-            json_body=body,
             bearer=token,
             expect_json=False,
         )
@@ -557,10 +571,10 @@ class IamClient:
 
         return _run_sync(self.revoke_other_account_sessions(access_token))
 
-    def logout_account_sync(self, access_token: str, *, refresh_token: str | None = None) -> None:
+    def logout_account_sync(self, access_token: str) -> None:
         """Synchronous logout wrapper for Django-style integrations."""
 
-        return _run_sync(self.logout_account(access_token, refresh_token=refresh_token))
+        return _run_sync(self.logout_account(access_token))
 
     def list_account_organizations_sync(self, access_token: str) -> list[AccountOrganization]:
         """Synchronous Organization list wrapper for Django-style integrations."""

@@ -386,7 +386,7 @@ async def test_account_org_invitation_helpers_use_bearer_or_public_requests() ->
             return httpx.Response(204)
         if request.url.path == "/api/v1/auth/logout":
             assert request.headers.get("authorization") == "Bearer user-token"
-            assert b'"refresh_token":"refresh-token"' in request.content
+            assert not request.content
             return httpx.Response(204)
         if request.url.path == "/api/v1/auth/me/organizations":
             return httpx.Response(
@@ -497,7 +497,7 @@ async def test_account_org_invitation_helpers_use_bearer_or_public_requests() ->
     sessions = await client.list_account_sessions("user-token")
     await client.revoke_account_session("user-token", "sid-current")
     await client.revoke_other_account_sessions("user-token")
-    await client.logout_account("user-token", refresh_token="refresh-token")
+    await client.logout_account("user-token")
     organizations = await client.list_account_organizations("user-token")
     switched = await client.switch_account_organization("user-token", "org-2")
     member = await client.has_account_organization_membership("user-token", "org-1")
@@ -559,3 +559,33 @@ async def test_token_factory_can_issue_expired_token_directly() -> None:
         await client.verify_token(token)
 
     await client.close()
+
+
+@pytest.mark.asyncio
+async def test_identity_profile_write_retires_username_and_preserves_null_email() -> None:
+    import inspect
+
+    from axis_vertex.profile import UserProfile
+
+    assert "username" not in inspect.signature(IamClient.update_account_profile).parameters
+    requests: list[httpx.Request] = []
+
+    async def handler(request: httpx.Request) -> httpx.Response:
+        requests.append(request)
+        assert request.url.path == "/api/v1/auth/me/profile"
+        assert request.headers["Authorization"] == "Bearer user-token"
+        assert json.loads(request.content) == {"displayName": "Display"}
+        return httpx.Response(
+            200,
+            json={"userId": "u1", "email": None, "username": None, "emailVerified": False},
+        )
+
+    config = IamConfig(endpoint="https://iam.invalid", client_id="client", client_secret="test", resource_audience="api://test")
+    async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as http_client:
+        client = IamClient(config, http_client=http_client)
+        profile = await client.update_account_profile("user-token", display_name="Display")
+        assert isinstance(profile, UserProfile)
+        assert profile.email is None
+        assert profile.username is None
+        assert profile.email_verified is False
+        assert len(requests) == 1

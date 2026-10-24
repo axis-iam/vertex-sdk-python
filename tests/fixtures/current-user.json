@@ -1,0 +1,31 @@
+{
+  "id": "01900000-0000-7000-8000-000000000001",
+  "email": null,
+  "username": "example-user",
+  "status": "ACTIVE",
+  "emailVerified": false,
+  "authenticationContext": {
+    "subjectType": "USER",
+    "applicationId": "01900000-0000-7000-8000-000000000002",
+    "clientId": "test-client",
+    "sessionId": "session-1",
+    "workspaceId": null,
+    "workspaceSelectionRequired": true,
+    "organizationId": null,
+    "organizationSlug": null,
+    "organizationRole": null,
+    "authTime": "2026-10-20T01:02:03Z",
+    "authenticationMethods": [
+      "pwd",
+      "mfa"
+    ],
+    "assuranceLevel": "urn:iam:acr:mfa",
+    "impersonation": null
+  },
+  "metadata": {
+    "displayName": "Example",
+    "roles": [
+      "untrusted"
+    ]
+  }
+}

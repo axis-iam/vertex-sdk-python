@@ -141,6 +141,7 @@ from .profile import (
 )
 
 __all__ = [
+    "AuthenticationContext", "CurrentUser", "ImpersonationContext",
     "Actor",
     "PERMISSIONS_SYNC_SCOPE",
     "PermissionManifest",
@@ -269,3 +270,5 @@ __all__ = [
     "matches_permission",
     "parse_permission",
 ]
+
+from .current_user import AuthenticationContext, CurrentUser, ImpersonationContext

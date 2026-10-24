@@ -326,3 +326,22 @@ python -m mypy src tests
 python -m pytest
 python -m build
 ```
+
+## Safe current-user context
+
+Call `await client.get_current_user(access_token)` explicitly with a user bearer to read
+`GET /api/v1/auth/me`. This API returns identity and `authenticationContext`,
+including Application/client/session bindings, nullable Workspace/Organization,
+selection requirement, authentication time/methods, assurance and impersonation.
+Null email, an unselected Workspace and empty method lists are valid. Missing
+required bindings, omitted nullable fields and malformed context are errors.
+Metadata is display data, never an authorization source. This call sends only
+the bearer, without a client secret, and does not decode token bytes or alter
+request-local JWT verification. HTTP 401/403/dependency failures propagate as
+errors; no anonymous or empty-user success is synthesized.
+
+The existing profile methods continue to read `/api/v1/auth/me/profile`; use the
+new current-user method for the explicit safe authentication context. No unified
+BFF/transaction transport or new machine authorization API is implied.
+
+Current-account logout revokes the authenticated OAuth token/session using only the Access Token. No Direct refresh-token body or Direct login/refresh fallback is supported.

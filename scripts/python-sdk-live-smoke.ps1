@@ -104,101 +104,11 @@ $TempPythonScript = $null
 
 try {
     if ($AutoProvisionLocal) {
-        $Suffix = $RunId.Replace("python-sdk-live-", "")
-        $UserPassword = "SdkLivePass123!"
-        $PortalLogin = Invoke-JsonApi `
-            -Method Post `
-            -Uri "$IamEndpoint/api/v1/auth/login" `
-            -Body @{ identifier = $AdminEmail; password = $AdminPassword; client_id = $PortalClientId }
-        $PortalToken = [string]$PortalLogin.access_token
-        Assert-Required $PortalToken "Portal admin access token"
-        $Report.checks.portalLogin = "PASS"
-
-        $App = Invoke-JsonApi `
-            -Method Post `
-            -Uri "$PortalEndpoint/portal/v1/apps" `
-            -Token $PortalToken `
-            -Body @{
-                name = "python-sdk-live-$Suffix"
-                description = "Temporary Python SDK live smoke application"
-                frontendOrigins = @("http://localhost:5173")
-            }
-        $AppId = [string]$App.id
-        $Audience = $AppId
-        $Report.created.applicationId = $AppId
-
-        $Client = Invoke-JsonApi `
-            -Method Post `
-            -Uri "$PortalEndpoint/portal/v1/apps/$AppId/clients" `
-            -Token $PortalToken `
-            -Body @{
-                name = "Python SDK Live WEB"
-                clientType = "WEB"
-                grantTypes = @("authorization_code", "refresh_token")
-                redirectUris = @("http://localhost:5173/callback")
-                allowedOrigins = @("http://localhost:5173")
-                postLogoutRedirectUris = @("http://localhost:5173")
-            }
-        $ClientId = [string]$Client.client.clientId
-        $ClientSecret = [string]$Client.clientSecret
-        Assert-Required $ClientId "Provisioned clientId"
-        Assert-Required $ClientSecret "Provisioned clientSecret"
-        $Report.created.clientId = $ClientId
-
-        $Permission = Invoke-JsonApi `
-            -Method Post `
-            -Uri "$PortalEndpoint/portal/v1/apps/$AppId/permissions" `
-            -Token $PortalToken `
-            -Body @{
-                resource = $parts[0]
-                action = $parts[1]
-                name = "Python SDK live $RequiredPermission"
-                description = "Temporary permission for Python SDK live smoke"
-            }
-        $Report.created.permissionId = [string]$Permission.id
-
-        $RoleKey = "sdk_live_reader"
-        $Role = Invoke-JsonApi `
-            -Method Post `
-            -Uri "$PortalEndpoint/portal/v1/apps/$AppId/roles" `
-            -Token $PortalToken `
-            -Body @{ key = $RoleKey; name = "SDK Live Reader"; description = "Temporary SDK live smoke role" }
-        $RoleId = [string]$Role.id
-        $Report.created.roleId = $RoleId
-
-        Invoke-JsonApi `
-            -Method Put `
-            -Uri "$PortalEndpoint/portal/v1/apps/$AppId/roles/$RoleId/permissions" `
-            -Token $PortalToken `
-            -Body @{ permissionIds = @([string]$Permission.id) } | Out-Null
-
-        $UserEmail = "python-sdk-live-$Suffix@example.com"
-        $User = Invoke-JsonApi `
-            -Method Post `
-            -Uri "$PortalEndpoint/portal/v1/apps/$AppId/users" `
-            -Token $PortalToken `
-            -Body @{ email = $UserEmail; username = "python_sdk_live_$($Suffix.Replace('-', '_'))"; password = $UserPassword }
-        $UserId = [string]$User.id
-        $Report.created.userId = $UserId
-
-        Invoke-JsonApi `
-            -Method Post `
-            -Uri "$PortalEndpoint/portal/v1/apps/$AppId/user-roles" `
-            -Token $PortalToken `
-            -Body @{ userId = $UserId; roleId = $RoleId; organizationId = $null; condition = $null } | Out-Null
-
-        $Login = Invoke-JsonApi `
-            -Method Post `
-            -Uri "$IamEndpoint/api/v1/auth/login" `
-            -Body @{ identifier = $UserEmail; password = $UserPassword; client_id = $ClientId }
-        $AccessToken = [string]$Login.access_token
-        Assert-Required $AccessToken "Provisioned user access token"
-        $Report.checks.localProvision = "PASS"
-    } else {
-        Assert-Required $ClientId "ClientId"
-        Assert-Required $ClientSecret "ClientSecret"
-        Assert-Required $AccessToken "AccessToken"
+        throw "AutoProvisionLocal is retired. Supply an OAuth authorization-code AccessToken, ClientId and ClientSecret from an explicitly provisioned application."
     }
+    Assert-Required $ClientId "ClientId"
+    Assert-Required $ClientSecret "ClientSecret"
+    Assert-Required $AccessToken "OAuth AccessToken"
 
     $script = @'
 import asyncio
