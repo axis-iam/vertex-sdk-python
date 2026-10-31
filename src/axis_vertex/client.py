@@ -7,7 +7,7 @@ import hashlib
 import json
 import re
 import time
-from collections.abc import Coroutine, Mapping, Sequence
+from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from typing import Any
 from urllib.parse import quote
@@ -15,6 +15,8 @@ from urllib.parse import quote
 import httpx
 import jwt
 
+from ._sync_runtime import SyncRuntime
+from .account_security_client import AccountSecurityOperations
 from .claims import IamClaims
 from .config import IamConfig
 from .context import IamContext, IamUser
@@ -45,7 +47,7 @@ _CONCRETE_PERMISSION = re.compile(r"^[a-z0-9_-]{1,128}:[a-z0-9_-]{1,128}$")
 _CANONICAL_UUID = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$")
 
 
-class IamClient:
+class IamClient(AccountSecurityOperations):
     """Server-side IAM SDK client.
 
     The client verifies Java IAM access tokens, resolves roles to final
@@ -53,10 +55,24 @@ class IamClient:
     permission registration helpers.
     """
 
-    def __init__(self, config: IamConfig, *, http_client: httpx.AsyncClient | None = None) -> None:
+    def __init__(
+        self,
+        config: IamConfig,
+        *,
+        http_client: httpx.AsyncClient | None = None,
+        sync_http_client_factory: Callable[[], httpx.AsyncClient] | None = None,
+    ) -> None:
         self.config = config
         self._http = http_client or httpx.AsyncClient(timeout=config.http_timeout)
         self._owns_http = http_client is None
+        factory = sync_http_client_factory
+        if factory is None and http_client is None:
+
+            def default_sync_http() -> httpx.AsyncClient:
+                return httpx.AsyncClient(timeout=config.http_timeout)
+
+            factory = default_sync_http
+        self._sync_runtime = SyncRuntime(factory, self._http)
         self._jwks_uri: str | None = None
         self._jwks: _CacheEntry[dict[str, dict[str, Any]]] | None = None
         self._jwks_lock = asyncio.Lock()
@@ -145,7 +161,7 @@ class IamClient:
         token = _normalize_bearer(access_token)
         if not token:
             raise UnauthorizedError("bearer token is required")
-        response = await self._http.get(
+        response = await self._http_for_call().get(
             f"{self.config.endpoint}/api/v1/auth/me",
             headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
         )
@@ -155,7 +171,7 @@ class IamClient:
 
     def get_current_user_sync(self, access_token: str) -> CurrentUser:
         """Explicit synchronous current-user wrapper."""
-        return _run_sync(self.get_current_user(access_token))
+        return self._sync_runtime.run(self.get_current_user(access_token))
 
     async def get_me(self, access_token: str, *, bypass_cache: bool = False) -> UserProfile:
         """Return the current user's profile from ``GET /api/v1/auth/me/profile``."""
@@ -511,34 +527,34 @@ class IamClient:
     def authenticate_sync(self, access_token: str) -> IamContext:
         """Synchronous wrapper for Django-style integrations."""
 
-        return _run_sync(self.authenticate(access_token))
+        return self._sync_runtime.run(self.authenticate(access_token))
 
     def get_me_sync(self, access_token: str, bypass_cache: bool = False) -> UserProfile:
         """Synchronous profile wrapper for Django-style integrations."""
 
-        return _run_sync(self.get_me(access_token, bypass_cache=bypass_cache))
+        return self._sync_runtime.run(self.get_me(access_token, bypass_cache=bypass_cache))
 
     def get_account_security_summary_sync(self, access_token: str) -> AccountSecuritySummary:
         """Synchronous security summary wrapper for Django-style integrations."""
 
-        return _run_sync(self.get_account_security_summary(access_token))
+        return self._sync_runtime.run(self.get_account_security_summary(access_token))
 
     def send_email_verification_sync(self, email: str) -> EmailVerificationResponse:
         """Synchronous email verification send wrapper for Django-style integrations."""
 
-        return _run_sync(self.send_email_verification(email))
+        return self._sync_runtime.run(self.send_email_verification(email))
 
     def verify_email_sync(self, token: str) -> EmailVerificationResponse:
         """Synchronous email verification wrapper for Django-style integrations."""
 
-        return _run_sync(self.verify_email(token))
+        return self._sync_runtime.run(self.verify_email(token))
 
     def change_password_sync(
         self, access_token: str, *, current_password: str, new_password: str
     ) -> None:
         """Synchronous password-change wrapper for Django-style integrations."""
 
-        return _run_sync(
+        return self._sync_runtime.run(
             self.change_password(
                 access_token,
                 current_password=current_password,
@@ -549,65 +565,69 @@ class IamClient:
     def request_password_reset_sync(self, email: str, *, redirect_uri: str | None = None) -> None:
         """Synchronous forgot-password wrapper for Django-style integrations."""
 
-        return _run_sync(self.request_password_reset(email, redirect_uri=redirect_uri))
+        return self._sync_runtime.run(self.request_password_reset(email, redirect_uri=redirect_uri))
 
     def reset_password_sync(self, token: str, *, new_password: str) -> None:
         """Synchronous password reset wrapper for Django-style integrations."""
 
-        return _run_sync(self.reset_password(token, new_password=new_password))
+        return self._sync_runtime.run(self.reset_password(token, new_password=new_password))
 
     def list_account_sessions_sync(self, access_token: str) -> list[SessionView]:
         """Synchronous session list wrapper for Django-style integrations."""
 
-        return _run_sync(self.list_account_sessions(access_token))
+        return self._sync_runtime.run(self.list_account_sessions(access_token))
 
     def revoke_account_session_sync(self, access_token: str, session_id: str) -> None:
         """Synchronous single-session revoke wrapper for Django-style integrations."""
 
-        return _run_sync(self.revoke_account_session(access_token, session_id))
+        return self._sync_runtime.run(self.revoke_account_session(access_token, session_id))
 
     def revoke_other_account_sessions_sync(self, access_token: str) -> None:
         """Synchronous other-sessions revoke wrapper for Django-style integrations."""
 
-        return _run_sync(self.revoke_other_account_sessions(access_token))
+        return self._sync_runtime.run(self.revoke_other_account_sessions(access_token))
 
     def logout_account_sync(self, access_token: str) -> None:
         """Synchronous logout wrapper for Django-style integrations."""
 
-        return _run_sync(self.logout_account(access_token))
+        return self._sync_runtime.run(self.logout_account(access_token))
 
     def list_account_organizations_sync(self, access_token: str) -> list[AccountOrganization]:
         """Synchronous Organization list wrapper for Django-style integrations."""
 
-        return _run_sync(self.list_account_organizations(access_token))
+        return self._sync_runtime.run(self.list_account_organizations(access_token))
 
     def get_current_account_organization_sync(
         self, access_token: str
     ) -> AccountOrganization | None:
         """Synchronous current Organization wrapper for Django-style integrations."""
 
-        return _run_sync(self.get_current_account_organization(access_token))
+        return self._sync_runtime.run(self.get_current_account_organization(access_token))
 
     def switch_account_organization_sync(
         self, access_token: str, organization_id: str
     ) -> OrganizationSwitchResponse:
         """Synchronous Organization switch wrapper for Django-style integrations."""
 
-        return _run_sync(self.switch_account_organization(access_token, organization_id))
+        return self._sync_runtime.run(
+            self.switch_account_organization(access_token, organization_id)
+        )
 
     def has_account_organization_membership_sync(
         self, access_token: str, organization_id: str
     ) -> bool:
         """Synchronous membership check wrapper for Django-style integrations."""
 
-        return _run_sync(self.has_account_organization_membership(access_token, organization_id))
+        return self._sync_runtime.run(
+            self.has_account_organization_membership(access_token, organization_id)
+        )
 
     def get_account_permission_summary_sync(
         self, access_token: str, organization_id: str | None = None
     ) -> AccountPermissionSummary:
         """Synchronous permission summary wrapper for Django-style integrations."""
 
-        return _run_sync(
+        return self._sync_runtime.run(
             self.get_account_permission_summary(access_token, organization_id=organization_id)
         )
 
@@ -616,7 +636,7 @@ class IamClient:
     ) -> PermissionCheckResponse:
         """Synchronous permission check wrapper for Django-style integrations."""
 
-        return _run_sync(
+        return self._sync_runtime.run(
             self.check_account_permission(
                 access_token,
                 permission,
@@ -629,22 +649,29 @@ class IamClient:
     ) -> PublicOrganizationInvitationPreview:
         """Synchronous invitation preview wrapper for Django-style integrations."""
 
-        return _run_sync(self.preview_organization_invitation(invitation_token))
+        return self._sync_runtime.run(self.preview_organization_invitation(invitation_token))
 
     def accept_organization_invitation_sync(
         self, invitation_token: str, access_token: str | None = None
     ) -> PublicOrganizationInvitationAcceptResponse:
         """Synchronous invitation accept wrapper for Django-style integrations."""
 
-        return _run_sync(
+        return self._sync_runtime.run(
             self.accept_organization_invitation(invitation_token, access_token=access_token)
         )
 
     async def close(self) -> None:
         """Close the underlying HTTP client when owned by this SDK."""
 
-        if self._owns_http:
-            await self._http.aclose()
+        try:
+            if self._owns_http:
+                await self._http.aclose()
+        finally:
+            await asyncio.to_thread(self._sync_runtime.close)
+
+    def close_sync(self) -> None:
+        """Close the synchronous pool and its persistent loop; do not block an async handler."""
+        self._sync_runtime.close()
 
     async def _jwk_for_kid(self, kid: str) -> dict[str, Any]:
         keys = await self._jwks_keys()
@@ -661,12 +688,12 @@ class IamClient:
         cached = self._jwks
         if not force and cached is not None and cached.expires_at > time.monotonic():
             return cached.value
-        async with self._jwks_lock:
+        async with self._sync_runtime.jwks_lock if self._sync_runtime.active else self._jwks_lock:
             cached = self._jwks
             if not force and cached is not None and cached.expires_at > time.monotonic():
                 return cached.value
             jwks_uri = await self._discover_jwks_uri()
-            response = await self._http.get(jwks_uri)
+            response = await self._http_for_call().get(jwks_uri)
             if response.status_code >= 400:
                 raise IamApiError(response.status_code, response.text)
             body = response.json()
@@ -685,7 +712,9 @@ class IamClient:
     async def _discover_jwks_uri(self) -> str:
         if self._jwks_uri is not None:
             return self._jwks_uri
-        response = await self._http.get(f"{self.config.endpoint}/.well-known/openid-configuration")
+        response = await self._http_for_call().get(
+            f"{self.config.endpoint}/.well-known/openid-configuration"
+        )
         if response.status_code >= 400:
             raise IamApiError(response.status_code, response.text)
         body = response.json()
@@ -711,7 +740,7 @@ class IamClient:
         if bearer is not None:
             headers["Authorization"] = f"Bearer {bearer}"
         request_auth = (self.config.client_id, self.config.client_secret) if auth else None
-        response = await self._http.request(
+        response = await self._http_for_call().request(
             method,
             f"{self.config.endpoint}{path}",
             json=json_body,
@@ -755,7 +784,7 @@ class IamClient:
         if auth:
             headers["X-IAM-Client-Id"] = self.config.client_id
             request_auth = (self.config.client_id, self.config.client_secret)
-        response = await self._http.request(
+        response = await self._http_for_call().request(
             method,
             f"{self.config.endpoint}{path}",
             json=json_body,
@@ -819,11 +848,3 @@ def _strict_permission_keys(
         seen.add(item)
         out.append(item)
     return tuple(out)
-
-
-def _run_sync[T](awaitable: Coroutine[Any, Any, T]) -> T:
-    try:
-        asyncio.get_running_loop()
-    except RuntimeError:
-        return asyncio.run(awaitable)
-    raise RuntimeError("sync IAM SDK wrapper cannot run inside an active event loop")

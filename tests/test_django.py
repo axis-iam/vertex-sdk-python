@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 
 import django
@@ -24,6 +25,26 @@ from axis_vertex.django import (  # noqa: E402
     require_step_up,
 )
 from axis_vertex.testing import MockIamServer  # noqa: E402
+
+
+def test_django_constructs_client_with_canonical_resource_audience() -> None:
+    from axis_vertex.django.middleware import get_default_client
+
+    with override_settings(
+        IAM_SDK={
+            "ENDPOINT": "https://iam.example.test",
+            "CLIENT_ID": "confidential-client",
+            "CLIENT_SECRET": "fixture-secret",
+            "RESOURCE_AUDIENCE": "api://orders",
+        }
+    ):
+        client = get_default_client()
+    try:
+        assert client.config.resource_audience == "api://orders"
+        assert client.config.client_id == "confidential-client"
+        assert not hasattr(client.config, "audience")
+    finally:
+        asyncio.run(client.close())
 
 
 def test_django_middleware_and_permission_decorator() -> None:

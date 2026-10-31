@@ -8,6 +8,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Literal, cast
+from urllib.parse import urlsplit
 from uuid import UUID
 
 import httpx
@@ -152,6 +153,7 @@ class RegistrationGrant:
     """Safe registration-grant detail. Raw proofs are never included."""
 
     id: str
+    version: int
     type: RegistrationGrantType
     status: RegistrationGrantStatus
     display_name: str | None
@@ -194,11 +196,41 @@ class CreateRegistrationGrantRequest:
 
 @dataclass(frozen=True, slots=True)
 class CreatedRegistrationGrant:
-    """A newly created grant and the only in-memory copy of its raw proof."""
+    """One-time create/rotate material, or a replay without reissued secrets."""
 
     grant: RegistrationGrant
-    registration_grant_token: str | None = None
-    registration_access_code: str | None = None
+    registration_grant_token: str | None
+    registration_access_code: str | None
+    registration_invitation_url: str | None
+    secret_already_issued: bool
+
+
+@dataclass(frozen=True, slots=True)
+class RegistrationGrantDeliveryRequest:
+    recipient: str
+    variant: Literal["LINK", "CODE"]
+    locale: str | None = None
+
+    def to_json(self) -> dict[str, object]:
+        if not self.recipient.strip() or self.variant not in {"LINK", "CODE"}:
+            raise ValueError("Recipient and delivery variant are required")
+        return {"recipient": self.recipient, "variant": self.variant, "locale": self.locale}
+
+
+@dataclass(frozen=True, slots=True)
+class RegistrationGrantDelivery:
+    id: str
+    grant_id: str
+    recipient: str
+    variant: Literal["LINK", "CODE"]
+    status: Literal["QUEUED", "SENDING", "DELIVERED", "FAILED", "UNKNOWN"]
+    failure_code: str | None
+    attempt_count: int
+    max_attempts: int | None
+    next_attempt_at: str | None
+    retryable: bool
+    expires_at: str
+    created_at: str
 
 
 @dataclass(frozen=True, slots=True)
@@ -635,15 +667,62 @@ class PortalOpenApiClient:
         return _registration_grant_page(body)
 
     async def create_registration_grant(
-        self, request: CreateRegistrationGrantRequest
+        self, request: CreateRegistrationGrantRequest, *, idempotency_key: str
     ) -> CreatedRegistrationGrant:
         body = await self._request_json_with_scope(
             "POST",
             "/open/v1/registration-grants",
             cast(PortalOpenApiScope, REGISTRATION_GRANTS_WRITE_SCOPE),
             json=request.to_json(),
+            headers=_registration_command_headers(idempotency_key),
         )
         return _created_registration_grant(body)
+
+    async def rotate_registration_grant(
+        self, grant_id: str, expected_version: int, *, idempotency_key: str
+    ) -> CreatedRegistrationGrant:
+        if isinstance(expected_version, bool) or expected_version < 0:
+            raise ValueError("Expected version must be non-negative")
+        body = await self._request_json_with_scope(
+            "POST",
+            _registration_grant_path(grant_id) + "/rotate",
+            cast(PortalOpenApiScope, REGISTRATION_GRANTS_WRITE_SCOPE),
+            json={"expectedVersion": expected_version},
+            headers=_registration_command_headers(idempotency_key),
+        )
+        result = _created_registration_grant(body)
+        if result.grant.id != grant_id:
+            raise _invalid_registration_grant_response()
+        return result
+
+    async def deliver_registration_grant(
+        self, grant_id: str, request: RegistrationGrantDeliveryRequest, *, idempotency_key: str
+    ) -> RegistrationGrantDelivery:
+        body = await self._request_json_with_scope(
+            "POST",
+            _registration_grant_path(grant_id) + "/deliveries",
+            cast(PortalOpenApiScope, REGISTRATION_GRANTS_WRITE_SCOPE),
+            json=request.to_json(),
+            headers=_registration_command_headers(idempotency_key),
+        )
+        result = _registration_grant_delivery(body)
+        if result.grant_id != grant_id or result.variant != request.variant:
+            raise _invalid_registration_grant_response()
+        return result
+
+    async def get_registration_grant_delivery(
+        self, grant_id: str, delivery_id: str
+    ) -> RegistrationGrantDelivery:
+        _registration_grant_path(delivery_id)
+        body = await self._request_json_with_scope(
+            "GET",
+            _registration_grant_path(grant_id) + "/deliveries/" + delivery_id,
+            cast(PortalOpenApiScope, REGISTRATION_GRANTS_READ_SCOPE),
+        )
+        result = _registration_grant_delivery(body)
+        if result.grant_id != grant_id or result.id != delivery_id:
+            raise _invalid_registration_grant_response()
+        return result
 
     async def get_registration_grant(self, grant_id: str) -> RegistrationGrant:
         body = await self._request_json_with_scope(
@@ -1394,8 +1473,12 @@ def _registration_grant(body: object) -> RegistrationGrant:
     used_count = payload.get("usedCount")
     if not isinstance(used_count, int) or isinstance(used_count, bool):
         raise _invalid_registration_grant_response()
+    version = payload.get("version")
+    if not isinstance(version, int) or isinstance(version, bool) or version < 0:
+        raise _invalid_registration_grant_response()
     return RegistrationGrant(
         id=_required_string(payload, "id"),
+        version=version,
         type=cast(RegistrationGrantType, grant_type),
         status=cast(RegistrationGrantStatus, status),
         display_name=_optional_string(payload, "displayName"),
@@ -1417,14 +1500,76 @@ def _created_registration_grant(body: object) -> CreatedRegistrationGrant:
     grant = _registration_grant(payload.get("grant"))
     token = _optional_string(payload, "registrationGrantToken")
     code = _optional_string(payload, "registrationAccessCode")
+    url = _optional_string(payload, "registrationInvitationUrl")
+    issued = payload.get("secretAlreadyIssued")
     if (
-        bool(token) == bool(code)
+        not isinstance(issued, bool)
         or grant.type not in ("EMAIL_LINK", "ACCESS_CODE")
-        or (grant.type == "EMAIL_LINK" and not token)
-        or (grant.type == "ACCESS_CODE" and not code)
+        or (issued and (token is not None or code is not None or url is not None))
+        or (
+            not issued and grant.type == "EMAIL_LINK" and (not token or not url or code is not None)
+        )
+        or (
+            not issued
+            and grant.type == "ACCESS_CODE"
+            and (not code or token is not None or url is not None)
+        )
     ):
         raise _invalid_registration_grant_response()
-    return CreatedRegistrationGrant(grant, token, code)
+    if url is not None:
+        try:
+            parsed = urlsplit(url)
+        except ValueError:
+            raise _invalid_registration_grant_response() from None
+        if (
+            parsed.scheme not in {"https", "http"}
+            or not parsed.hostname
+            or parsed.username is not None
+            or parsed.fragment
+        ):
+            raise _invalid_registration_grant_response()
+    return CreatedRegistrationGrant(grant, token, code, url, issued)
+
+
+def _registration_command_headers(key: str) -> Mapping[str, str]:
+    if not key.strip() or len(key) > 200 or any(ord(c) < 32 or 127 <= ord(c) <= 159 for c in key):
+        raise ValueError("Idempotency-Key must contain 1 to 200 printable characters")
+    return {"Idempotency-Key": key}
+
+
+def _registration_grant_delivery(body: object) -> RegistrationGrantDelivery:
+    p = _mapping(body)
+    variant, status = p.get("variant"), p.get("status")
+    count, maximum, retryable = p.get("attemptCount"), p.get("maxAttempts"), p.get("retryable")
+    if (
+        not isinstance(variant, str)
+        or variant not in {"LINK", "CODE"}
+        or not isinstance(status, str)
+        or status not in {"QUEUED", "SENDING", "DELIVERED", "FAILED", "UNKNOWN"}
+        or not isinstance(count, int)
+        or isinstance(count, bool)
+        or count < 0
+        or (
+            maximum is not None
+            and (not isinstance(maximum, int) or isinstance(maximum, bool) or maximum < 1)
+        )
+        or not isinstance(retryable, bool)
+    ):
+        raise _invalid_registration_grant_response()
+    return RegistrationGrantDelivery(
+        id=_required_string(p, "id"),
+        grant_id=_required_string(p, "grantId"),
+        recipient=_required_string(p, "recipient"),
+        variant=cast(Literal["LINK", "CODE"], variant),
+        status=cast(Literal["QUEUED", "SENDING", "DELIVERED", "FAILED", "UNKNOWN"], status),
+        failure_code=_optional_string(p, "failureCode"),
+        attempt_count=count,
+        max_attempts=maximum,
+        next_attempt_at=_optional_string(p, "nextAttemptAt"),
+        retryable=retryable,
+        expires_at=_required_string(p, "expiresAt"),
+        created_at=_required_string(p, "createdAt"),
+    )
 
 
 def _page_metadata(body: object) -> RegistrationGrantPageMetadata:

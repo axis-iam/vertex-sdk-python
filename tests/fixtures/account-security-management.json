@@ -1,0 +1,6309 @@
+{
+  "validOperations": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "COMMITTED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": {
+        "completedAt": "2026-10-30T00:00:00Z",
+        "finalLoginMethodVersion": 5,
+        "sessionImpact": "REAUTHENTICATE"
+      },
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": null
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": []
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "CANCELLED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": null
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "CANCELLED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": []
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "EXPIRED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": null
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "EXPIRED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": []
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "REJECTED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": null
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "REJECTED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": []
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedEmail": null,
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab",
+        "future": {
+          "subject": "uninterpreted-not-retained"
+        }
+      },
+      "future": {
+        "uninterpreted": [
+          1,
+          true,
+          null
+        ]
+      }
+    }
+  ],
+  "invalidOperations": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "bad",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABAB"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": null
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": 42,
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": {},
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "CANCELLED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "EXPIRED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "LINK",
+      "state": "REJECTED",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "UNLINK",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": [],
+      "providerTarget": {
+        "providerId": "00000000-0000-0000-0000-000000000007",
+        "maskedDisplayName": "A***",
+        "maskedEmail": "a***@adapter.example.test",
+        "reference": "abababababababababababababababababababababababababababababababab"
+      }
+    }
+  ],
+  "validSnapshots": [
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "ACCOUNT_INACTIVE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "MANAGED_IDENTIFIER"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "METHOD_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "REAUTH_METHOD_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "NOT_APPLICABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "ALREADY_VERIFIED"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "ALREADY_PRIMARY"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_UNVERIFIED"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_RANGE_REJECTED"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "LAST_LOGIN_METHOD"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "PRIMARY_REPLACEMENT_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP",
+              "TARGET_PHONE_OTP",
+              "REPLACEMENT_PRIMARY",
+              "REMOVE_OLD",
+              "COUNTERPART_CONFIRMATION",
+              "REMAINING_LOGIN_PATH"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": null
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": null
+        }
+      ],
+      "management": null
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null
+        }
+      ]
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          },
+          "future": []
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": [],
+            "future": null
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD",
+            "future": true
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ],
+        "future": {}
+      },
+      "future": false
+    }
+  ],
+  "invalidSnapshots": [
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": "true",
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": null,
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "UNKNOWN"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": [
+              "invalid"
+            ]
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [
+              "UNKNOWN"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": false,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        }
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "UNKNOWN"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "OTHER": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "g***@legacy.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_PRIMARY"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "REPLACEMENT_PRIMARY"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "NEW_IDENTIFIER",
+                "REMAINING_LOGIN_PATH",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": false,
+              "unavailableReasons": [
+                "IDENTIFIER_RANGE_REJECTED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF",
+                "REMAINING_LOGIN_PATH",
+                "COUNTERPART_CONFIRMATION",
+                "REPLACEMENT_PRIMARY",
+                "TARGET_EMAIL_OTP"
+              ],
+              "replacementPrimaryIds": [
+                "00000000-0000-0000-0000-000000000002"
+              ]
+            },
+            "EXECUTE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000002",
+          "kind": "EMAIL",
+          "displayValue": "n***@allowed.example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": false,
+          "managedBy": null,
+          "capabilities": {
+            "VERIFY": {
+              "allowed": false,
+              "unavailableReasons": [
+                "ALREADY_VERIFIED"
+              ],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "SET_PRIMARY": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REMOVE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "REPLACE": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            },
+            "TRANSFER": {
+              "allowed": true,
+              "unavailableReasons": [],
+              "requirements": [
+                "CURRENT_ACCOUNT_PROOF"
+              ],
+              "replacementPrimaryIds": []
+            }
+          }
+        }
+      ],
+      "management": {
+        "add": {
+          "USERNAME": {
+            "allowed": false,
+            "unavailableReasons": [
+              "IDENTIFIER_ALREADY_EXISTS"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "EMAIL": {
+            "allowed": true,
+            "unavailableReasons": [],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_EMAIL_OTP"
+            ],
+            "replacementPrimaryIds": []
+          },
+          "PHONE": {
+            "allowed": false,
+            "unavailableReasons": [
+              "TARGET_PROOF_UNAVAILABLE"
+            ],
+            "requirements": [
+              "CURRENT_ACCOUNT_PROOF",
+              "NEW_IDENTIFIER",
+              "TARGET_PHONE_OTP"
+            ],
+            "replacementPrimaryIds": []
+          }
+        },
+        "proofOptions": [
+          {
+            "method": "PASSWORD"
+          },
+          {
+            "method": "EMAIL_OTP",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "maskedIdentifier": "g***@legacy.example.test"
+          },
+          {
+            "method": "PROVIDER",
+            "methodId": "identity:linked",
+            "displayName": "Existing proof"
+          },
+          {
+            "method": "STEP_UP_PROOF",
+            "availableMethods": [
+              "TOTP",
+              "WEBAUTHN"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "denials": [
+    "ACCOUNT_INACTIVE",
+    "MANAGED_IDENTIFIER",
+    "METHOD_UNAVAILABLE",
+    "REAUTH_METHOD_UNAVAILABLE",
+    "TARGET_PROOF_UNAVAILABLE",
+    "IDENTIFIER_ALREADY_EXISTS",
+    "NOT_APPLICABLE",
+    "ALREADY_VERIFIED",
+    "ALREADY_PRIMARY",
+    "IDENTIFIER_UNVERIFIED",
+    "IDENTIFIER_RANGE_REJECTED",
+    "LAST_LOGIN_METHOD",
+    "PRIMARY_REPLACEMENT_UNAVAILABLE"
+  ],
+  "requirements": [
+    "CURRENT_ACCOUNT_PROOF",
+    "NEW_IDENTIFIER",
+    "TARGET_EMAIL_OTP",
+    "TARGET_PHONE_OTP",
+    "REPLACEMENT_PRIMARY",
+    "REMOVE_OLD",
+    "COUNTERPART_CONFIRMATION",
+    "REMAINING_LOGIN_PATH"
+  ],
+  "invalidMfaStatus": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "TOTP_ENROLL",
+      "state": "READY",
+      "createdAt": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "expectedLoginMethodVersion": 4,
+      "proofRequirement": "SESSION",
+      "proofOptions": [],
+      "proofSatisfied": true,
+      "nextChallengeAt": null,
+      "reasonCode": null,
+      "result": null,
+      "material": {
+        "secret": "fixture-material",
+        "qrCodeUri": "otpauth://totp/fixture",
+        "issuer": "Axis Vertex"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "TOTP_ENROLL",
+      "state": "READY",
+      "createdAt": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "expectedLoginMethodVersion": 4,
+      "proofRequirement": "SESSION",
+      "proofOptions": [],
+      "proofSatisfied": true,
+      "nextChallengeAt": null,
+      "reasonCode": null,
+      "result": null,
+      "recoveryCodes": {
+        "codes": [
+          "fixture-code"
+        ],
+        "count": 1
+      }
+    }
+  ],
+  "validExtendedMfa": [
+    {
+      "loginMethodVersion": 4,
+      "totpEnroll": {
+        "allowed": true,
+        "reasonCode": null,
+        "proofRequirement": "SESSION",
+        "proofOptions": []
+      },
+      "totpDisable": {
+        "allowed": true,
+        "reasonCode": null,
+        "proofRequirement": "SESSION",
+        "proofOptions": []
+      },
+      "recoveryCodesGenerate": {
+        "allowed": true,
+        "reasonCode": null,
+        "proofRequirement": "SESSION",
+        "proofOptions": []
+      },
+      "future": {
+        "extra": true
+      }
+    }
+  ]
+}

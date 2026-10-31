@@ -1,0 +1,1035 @@
+{
+  "samples": {
+    "OperationProofOption": {
+      "method": "PASSWORD"
+    },
+    "OperationCompletion": {
+      "completedAt": "2026-10-30T00:00:00Z",
+      "finalLoginMethodVersion": 5,
+      "sessionImpact": "CURRENT_SESSION_RETAINED"
+    },
+    "MfaOperationResult": {
+      "completedAt": "2026-10-30T00:00:00Z",
+      "finalLoginMethodVersion": 5,
+      "sessionImpact": "CURRENT_SESSION_RETAINED",
+      "recoveryBatchId": null,
+      "recoveryCount": null
+    },
+    "MfaAction": {
+      "allowed": true,
+      "reasonCode": null,
+      "proofRequirement": "SESSION",
+      "proofOptions": []
+    },
+    "MfaOperation": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "TOTP_ENROLL",
+      "state": "READY",
+      "createdAt": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "expectedLoginMethodVersion": 4,
+      "proofRequirement": "SESSION",
+      "proofOptions": [],
+      "proofSatisfied": true,
+      "nextChallengeAt": null,
+      "reasonCode": null,
+      "result": null
+    },
+    "IdentityOperation": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "type": "ADD",
+      "state": "READY",
+      "expiresAt": "2026-10-30T00:10:00Z",
+      "requiredProofs": [],
+      "result": {},
+      "maskedIdentifier": null,
+      "nextChallengeAt": null,
+      "completion": null,
+      "proofOptions": []
+    },
+    "TotpMaterial": {
+      "secret": "fixture-material",
+      "qrCodeUri": "otpauth://totp/fixture",
+      "issuer": "Axis Vertex"
+    },
+    "RecoveryCodes": {
+      "codes": [
+        "fixture-code"
+      ],
+      "count": 1
+    },
+    "ProviderAuthorization": {
+      "authorizationId": "00000000-0000-0000-0000-000000000001",
+      "authorizationUrl": "https://provider.example.test/authorize",
+      "expiresAt": "2026-10-30T00:10:00Z"
+    },
+    "OperationStepUpChallenge": {
+      "challengeId": "scoped-challenge",
+      "availableMethods": [
+        "TOTP",
+        "WEBAUTHN"
+      ]
+    },
+    "OperationWebAuthnStart": {
+      "requestId": "scoped-request",
+      "publicKey": "{\"challenge\":\"fixture\"}"
+    },
+    "AccountIdentifiers": {
+      "loginMethodVersion": 4,
+      "items": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL",
+          "displayValue": "mail@example.test",
+          "status": "ACTIVE",
+          "verificationState": "VERIFIED",
+          "verifiedAt": "2026-10-30T00:00:00Z",
+          "verificationSource": null,
+          "isPrimary": true,
+          "managedBy": null
+        }
+      ]
+    },
+    "AccountLoginMethods": {
+      "loginMethodVersion": 4,
+      "methods": [
+        {
+          "methodId": "identifier:00000000-0000-0000-0000-000000000001",
+          "kind": "EMAIL_OTP",
+          "roles": [
+            "FIRST_FACTOR"
+          ],
+          "status": "AVAILABLE",
+          "identifierId": "00000000-0000-0000-0000-000000000001",
+          "credentialId": null,
+          "identityId": null,
+          "providerId": null,
+          "capabilities": {
+            "canRemove": true
+          },
+          "unavailableReasons": []
+        }
+      ]
+    },
+    "LinkableIdentityProvider": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "providerType": "OIDC",
+      "protocol": "OIDC",
+      "displayName": "Example",
+      "enabled": true,
+      "linked": true,
+      "linkedAt": "2026-10-30T00:00:00Z",
+      "supportsAccountLinking": true,
+      "canLink": false,
+      "canReauthenticate": true,
+      "unavailableReasons": []
+    },
+    "MfaCapabilities": {
+      "loginMethodVersion": 4,
+      "totpEnroll": {
+        "allowed": true,
+        "reasonCode": null,
+        "proofRequirement": "SESSION",
+        "proofOptions": []
+      },
+      "totpDisable": {
+        "allowed": true,
+        "reasonCode": null,
+        "proofRequirement": "SESSION",
+        "proofOptions": []
+      },
+      "recoveryCodesGenerate": {
+        "allowed": true,
+        "reasonCode": null,
+        "proofRequirement": "SESSION",
+        "proofOptions": []
+      }
+    },
+    "TotpBeginResult": {
+      "operation": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "delivery": "AVAILABLE",
+      "material": {
+        "secret": "fixture-material",
+        "qrCodeUri": "otpauth://totp/fixture",
+        "issuer": "Axis Vertex"
+      }
+    },
+    "MfaCompletionResult": {
+      "operation": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "delivery": "NOT_APPLICABLE",
+      "recoveryCodes": null
+    },
+    "MfaChallengeResult": {
+      "operation": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "challengeId": "00000000-0000-0000-0000-000000000001",
+      "nextChallengeAt": "2026-10-30T00:10:00Z"
+    },
+    "IdentityChallengeResult": {
+      "operation": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "challengeId": "00000000-0000-0000-0000-000000000001",
+      "nextChallengeAt": "2026-10-30T00:10:00Z"
+    }
+  },
+  "cases": [
+    {
+      "name": "list_account_identifiers",
+      "method": "GET",
+      "path": "/api/v1/auth/me/identifiers",
+      "body": null,
+      "response": {
+        "loginMethodVersion": 4,
+        "items": [
+          {
+            "id": "00000000-0000-0000-0000-000000000001",
+            "kind": "EMAIL",
+            "displayValue": "mail@example.test",
+            "status": "ACTIVE",
+            "verificationState": "VERIFIED",
+            "verifiedAt": "2026-10-30T00:00:00Z",
+            "verificationSource": null,
+            "isPrimary": true,
+            "managedBy": null
+          }
+        ]
+      },
+      "args": [
+        "\"Bearer current-user\""
+      ]
+    },
+    {
+      "name": "list_account_login_methods",
+      "method": "GET",
+      "path": "/api/v1/auth/me/login-methods",
+      "body": null,
+      "response": {
+        "loginMethodVersion": 4,
+        "methods": [
+          {
+            "methodId": "identifier:00000000-0000-0000-0000-000000000001",
+            "kind": "EMAIL_OTP",
+            "roles": [
+              "FIRST_FACTOR"
+            ],
+            "status": "AVAILABLE",
+            "identifierId": "00000000-0000-0000-0000-000000000001",
+            "credentialId": null,
+            "identityId": null,
+            "providerId": null,
+            "capabilities": {
+              "canRemove": true
+            },
+            "unavailableReasons": []
+          }
+        ]
+      },
+      "args": [
+        "\"Bearer current-user\""
+      ]
+    },
+    {
+      "name": "list_linkable_identity_providers",
+      "method": "GET",
+      "path": "/api/v1/auth/me/linkable-identity-providers",
+      "body": null,
+      "response": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "providerType": "OIDC",
+          "protocol": "OIDC",
+          "displayName": "Example",
+          "enabled": true,
+          "linked": true,
+          "linkedAt": "2026-10-30T00:00:00Z",
+          "supportsAccountLinking": true,
+          "canLink": false,
+          "canReauthenticate": true,
+          "unavailableReasons": []
+        }
+      ],
+      "args": [
+        "\"Bearer current-user\""
+      ]
+    },
+    {
+      "name": "create_identity_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations",
+      "body": {
+        "type": "ADD",
+        "expectedLoginMethodVersion": 4,
+        "payload": {
+          "identifier": {
+            "kind": "EMAIL",
+            "value": "new@example.test"
+          }
+        }
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "IdentityOperationCreate(4, AddIdentity(LoginIdentifier(IdentifierKind.EMAIL, \"new@example.test\")))",
+        "\"retained-key\""
+      ]
+    },
+    {
+      "name": "get_identity_operation",
+      "method": "GET",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001",
+      "body": null,
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID"
+      ]
+    },
+    {
+      "name": "list_identity_transfers",
+      "method": "GET",
+      "path": "/api/v1/auth/me/identity-operations/transfers",
+      "body": null,
+      "response": [
+        {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "type": "ADD",
+          "state": "READY",
+          "expiresAt": "2026-10-30T00:10:00Z",
+          "requiredProofs": [],
+          "result": {},
+          "maskedIdentifier": null,
+          "nextChallengeAt": null,
+          "completion": null,
+          "proofOptions": []
+        }
+      ],
+      "args": [
+        "\"Bearer current-user\""
+      ]
+    },
+    {
+      "name": "reauthenticate_identity_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/reauthenticate",
+      "body": {
+        "method": "PASSWORD",
+        "password": "fixture-password"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "PasswordReauthentication(\"fixture-password\")"
+      ]
+    },
+    {
+      "name": "challenge_identity_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/challenges",
+      "body": {
+        "targetProofMethod": "EMAIL_OTP"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "TargetProofMethod.EMAIL_OTP"
+      ]
+    },
+    {
+      "name": "challenge_identity_current_account",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/current-account/challenges",
+      "body": {
+        "identifierId": "00000000-0000-0000-0000-000000000001"
+      },
+      "response": {
+        "operation": {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "type": "ADD",
+          "state": "READY",
+          "expiresAt": "2026-10-30T00:10:00Z",
+          "requiredProofs": [],
+          "result": {},
+          "maskedIdentifier": null,
+          "nextChallengeAt": null,
+          "completion": null,
+          "proofOptions": []
+        },
+        "challengeId": "00000000-0000-0000-0000-000000000001",
+        "nextChallengeAt": "2026-10-30T00:10:00Z"
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "ID"
+      ]
+    },
+    {
+      "name": "complete_identity_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/complete",
+      "body": {
+        "proofs": []
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "IdentityOperationComplete(())"
+      ]
+    },
+    {
+      "name": "cancel_identity_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/cancel",
+      "body": {},
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID"
+      ]
+    },
+    {
+      "name": "confirm_identity_transfer",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/confirm-transfer",
+      "body": {
+        "decision": "ACCEPT"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "TransferDecision.ACCEPT"
+      ]
+    },
+    {
+      "name": "authorize_identity_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/authorize",
+      "body": {
+        "purpose": "CURRENT_ACCOUNT",
+        "methodId": "identity:linked",
+        "redirectUri": "https://app.example.test/callback",
+        "codeChallenge": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "codeChallengeMethod": "S256"
+      },
+      "response": {
+        "authorizationId": "00000000-0000-0000-0000-000000000001",
+        "authorizationUrl": "https://provider.example.test/authorize",
+        "expiresAt": "2026-10-30T00:10:00Z"
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "IdentityProviderAuthorize(AuthorizationPurpose.CURRENT_ACCOUNT, \"https://app.example.test/callback\", \"ccccccccccccccccccccccccccccccccccccccccccc\", \"S256\", \"identity:linked\")"
+      ]
+    },
+    {
+      "name": "complete_identity_provider_authorization",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/provider-callback",
+      "body": {
+        "authorizationId": "00000000-0000-0000-0000-000000000001",
+        "codeVerifier": "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "ProviderExchange(ID, \"vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\")"
+      ]
+    },
+    {
+      "name": "get_mfa_capabilities",
+      "method": "GET",
+      "path": "/api/v1/auth/mfa/capabilities",
+      "body": null,
+      "response": {
+        "loginMethodVersion": 4,
+        "totpEnroll": {
+          "allowed": true,
+          "reasonCode": null,
+          "proofRequirement": "SESSION",
+          "proofOptions": []
+        },
+        "totpDisable": {
+          "allowed": true,
+          "reasonCode": null,
+          "proofRequirement": "SESSION",
+          "proofOptions": []
+        },
+        "recoveryCodesGenerate": {
+          "allowed": true,
+          "reasonCode": null,
+          "proofRequirement": "SESSION",
+          "proofOptions": []
+        }
+      },
+      "args": [
+        "\"Bearer current-user\""
+      ]
+    },
+    {
+      "name": "create_mfa_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations",
+      "body": {
+        "type": "TOTP_ENROLL",
+        "expectedLoginMethodVersion": 4
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "MfaOperationCreate(MfaOperationType.TOTP_ENROLL, 4)",
+        "\"retained-key\""
+      ]
+    },
+    {
+      "name": "get_mfa_operation",
+      "method": "GET",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001",
+      "body": null,
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID"
+      ]
+    },
+    {
+      "name": "reauthenticate_mfa_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/reauthenticate",
+      "body": {
+        "method": "PASSWORD",
+        "password": "fixture-password"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "PasswordReauthentication(\"fixture-password\")"
+      ]
+    },
+    {
+      "name": "challenge_mfa_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/challenges",
+      "body": {
+        "method": "EMAIL_OTP",
+        "identifierId": "00000000-0000-0000-0000-000000000001"
+      },
+      "response": {
+        "operation": {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "type": "TOTP_ENROLL",
+          "state": "READY",
+          "createdAt": "2026-10-30T00:00:00Z",
+          "expiresAt": "2026-10-30T00:10:00Z",
+          "expectedLoginMethodVersion": 4,
+          "proofRequirement": "SESSION",
+          "proofOptions": [],
+          "proofSatisfied": true,
+          "nextChallengeAt": null,
+          "reasonCode": null,
+          "result": null
+        },
+        "challengeId": "00000000-0000-0000-0000-000000000001",
+        "nextChallengeAt": "2026-10-30T00:10:00Z"
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "ID"
+      ]
+    },
+    {
+      "name": "authorize_mfa_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/authorize",
+      "body": {
+        "methodId": "identity:linked",
+        "redirectUri": "https://app.example.test/callback",
+        "codeChallenge": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "codeChallengeMethod": "S256"
+      },
+      "response": {
+        "authorizationId": "00000000-0000-0000-0000-000000000001",
+        "authorizationUrl": "https://provider.example.test/authorize",
+        "expiresAt": "2026-10-30T00:10:00Z"
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "MfaProviderAuthorize(\"identity:linked\", \"https://app.example.test/callback\", \"ccccccccccccccccccccccccccccccccccccccccccc\", \"S256\")"
+      ]
+    },
+    {
+      "name": "complete_mfa_provider_authorization",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/provider-callback",
+      "body": {
+        "authorizationId": "00000000-0000-0000-0000-000000000001",
+        "codeVerifier": "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "ProviderExchange(ID, \"vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\")"
+      ]
+    },
+    {
+      "name": "begin_totp_enrollment_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/begin",
+      "body": {},
+      "response": {
+        "operation": {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "type": "TOTP_ENROLL",
+          "state": "READY",
+          "createdAt": "2026-10-30T00:00:00Z",
+          "expiresAt": "2026-10-30T00:10:00Z",
+          "expectedLoginMethodVersion": 4,
+          "proofRequirement": "SESSION",
+          "proofOptions": [],
+          "proofSatisfied": true,
+          "nextChallengeAt": null,
+          "reasonCode": null,
+          "result": null
+        },
+        "delivery": "AVAILABLE",
+        "material": {
+          "secret": "fixture-material",
+          "qrCodeUri": "otpauth://totp/fixture",
+          "issuer": "Axis Vertex"
+        }
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID"
+      ]
+    },
+    {
+      "name": "complete_mfa_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/complete",
+      "body": {},
+      "response": {
+        "operation": {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "type": "TOTP_ENROLL",
+          "state": "READY",
+          "createdAt": "2026-10-30T00:00:00Z",
+          "expiresAt": "2026-10-30T00:10:00Z",
+          "expectedLoginMethodVersion": 4,
+          "proofRequirement": "SESSION",
+          "proofOptions": [],
+          "proofSatisfied": true,
+          "nextChallengeAt": null,
+          "reasonCode": null,
+          "result": null
+        },
+        "delivery": "NOT_APPLICABLE",
+        "recoveryCodes": null
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "None"
+      ]
+    },
+    {
+      "name": "cancel_mfa_operation",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/cancel",
+      "body": {},
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID"
+      ]
+    },
+    {
+      "name": "start_identity_operation_step_up",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/step-up/start",
+      "body": {},
+      "response": {
+        "challengeId": "scoped-challenge",
+        "availableMethods": [
+          "TOTP",
+          "WEBAUTHN"
+        ]
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID"
+      ]
+    },
+    {
+      "name": "verify_identity_operation_step_up",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/step-up/verify",
+      "body": {
+        "challengeId": "scoped-challenge",
+        "code": "123456"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "OperationStepUpVerify(\"scoped-challenge\", \"123456\")"
+      ]
+    },
+    {
+      "name": "start_identity_operation_webauthn",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/step-up/webauthn/start",
+      "body": {
+        "challengeId": "scoped-challenge"
+      },
+      "response": {
+        "requestId": "scoped-request",
+        "publicKey": "{\"challenge\":\"fixture\"}"
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "\"scoped-challenge\""
+      ]
+    },
+    {
+      "name": "verify_identity_operation_webauthn",
+      "method": "POST",
+      "path": "/api/v1/auth/me/identity-operations/00000000-0000-0000-0000-000000000001/step-up/webauthn/verify",
+      "body": {
+        "challengeId": "scoped-challenge",
+        "requestId": "scoped-request",
+        "credential": "fixture-credential"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "ADD",
+        "state": "READY",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "requiredProofs": [],
+        "result": {},
+        "maskedIdentifier": null,
+        "nextChallengeAt": null,
+        "completion": null,
+        "proofOptions": []
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "OperationWebAuthnVerify(\"scoped-challenge\", \"scoped-request\", \"fixture-credential\")"
+      ]
+    },
+    {
+      "name": "start_mfa_operation_step_up",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/step-up/start",
+      "body": {},
+      "response": {
+        "challengeId": "scoped-challenge",
+        "availableMethods": [
+          "TOTP",
+          "WEBAUTHN"
+        ]
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID"
+      ]
+    },
+    {
+      "name": "verify_mfa_operation_step_up",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/step-up/verify",
+      "body": {
+        "challengeId": "scoped-challenge",
+        "code": "123456"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "OperationStepUpVerify(\"scoped-challenge\", \"123456\")"
+      ]
+    },
+    {
+      "name": "start_mfa_operation_webauthn",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/step-up/webauthn/start",
+      "body": {
+        "challengeId": "scoped-challenge"
+      },
+      "response": {
+        "requestId": "scoped-request",
+        "publicKey": "{\"challenge\":\"fixture\"}"
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "\"scoped-challenge\""
+      ]
+    },
+    {
+      "name": "verify_mfa_operation_webauthn",
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/operations/00000000-0000-0000-0000-000000000001/step-up/webauthn/verify",
+      "body": {
+        "challengeId": "scoped-challenge",
+        "requestId": "scoped-request",
+        "credential": "fixture-credential"
+      },
+      "response": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "type": "TOTP_ENROLL",
+        "state": "READY",
+        "createdAt": "2026-10-30T00:00:00Z",
+        "expiresAt": "2026-10-30T00:10:00Z",
+        "expectedLoginMethodVersion": 4,
+        "proofRequirement": "SESSION",
+        "proofOptions": [],
+        "proofSatisfied": true,
+        "nextChallengeAt": null,
+        "reasonCode": null,
+        "result": null
+      },
+      "args": [
+        "\"Bearer current-user\"",
+        "ID",
+        "OperationWebAuthnVerify(\"scoped-challenge\", \"scoped-request\", \"fixture-credential\")"
+      ]
+    }
+  ]
+}

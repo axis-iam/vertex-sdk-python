@@ -31,8 +31,6 @@ class IamConfig:
     client_id: str
     client_secret: str
     resource_audience: str = ""
-    # Deprecated alias for resource_audience. Do not pass client_id here.
-    audience: str | None = None
     issuer: str | None = None
     http_timeout: float = 5.0
     jwks_cache_ttl: float = 300.0
@@ -45,23 +43,18 @@ class IamConfig:
         client_id = self.client_id.strip()
         client_secret = self.client_secret.strip()
         resource_audience = (self.resource_audience or "").strip()
-        deprecated_audience = (self.audience or "").strip()
         if not client_id:
             raise IamConfigError("client_id is required")
         if not client_secret:
             raise IamConfigError(
                 "client_secret is required for WEB/M2M confidential ApplicationClient"
             )
-        if resource_audience and deprecated_audience and resource_audience != deprecated_audience:
-            raise IamConfigError("audience deprecated alias must match resource_audience")
-        resource_audience = resource_audience or deprecated_audience
         if not resource_audience:
             raise IamConfigError("resource_audience is required")
         object.__setattr__(self, "endpoint", endpoint)
         object.__setattr__(self, "client_id", client_id)
         object.__setattr__(self, "client_secret", client_secret)
         object.__setattr__(self, "resource_audience", resource_audience)
-        object.__setattr__(self, "audience", resource_audience)
         object.__setattr__(self, "issuer", normalize_endpoint(self.issuer or endpoint))
 
         if self.http_timeout <= 0:

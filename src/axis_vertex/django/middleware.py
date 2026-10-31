@@ -28,7 +28,6 @@ def get_default_client() -> IamClient:
             client_id=str(cfg["CLIENT_ID"]),
             client_secret=str(cfg["CLIENT_SECRET"]),
             resource_audience=str(cfg["RESOURCE_AUDIENCE"]),
-            audience=str(cfg["AUDIENCE"]) if cfg.get("AUDIENCE") else None,
             issuer=str(cfg["ISSUER"]) if cfg.get("ISSUER") else None,
         )
     )

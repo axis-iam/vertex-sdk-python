@@ -34,6 +34,7 @@ confidential ApplicationClient for Python server APIs.
 - `client_id` is `ApplicationClient.clientId`.
 - `client_secret` is that confidential ApplicationClient secret.
 - `resource_audience` is `Application.resourceAudience`, for example `api://socratiq`. Resource servers use it to verify access-token `aud`.
+- `IamConfig` accepts only `resource_audience`; the former `audience` configuration keyword is not supported. Missing resource audience fails at construction, and `client_id` is never used as its fallback.
 - SPA/NATIVE public clients have no secret and must not be used by this server SDK.
 - Browser login and embedded provider selection belong to `sdk-js`.
 - If a Python WEB application implements interactive Authorization Code login itself, Axis Vertex requires both confidential client authentication at token exchange and S256 PKCE (`code_challenge_method=S256` plus matching `code_verifier`). Store OAuth `state` and the PKCE verifier server-side; this SDK does not provide a browser login/callback helper.
@@ -219,11 +220,30 @@ not exposed because Axis Vertex rejects no-scope M2M requests with
 Registration Grant helpers are server-only and require explicit `registration_grants:read`, `registration_grants:write`, and `registration_grants:redemptions:read` M2M scopes.
 
 ```python
-created = await portal.create_registration_grant(CreateRegistrationGrantRequest(type="ACCESS_CODE"))
-if created.registration_access_code is None:
-    raise RuntimeError("missing one-time proof")
-# Consume immediately. Never log, cache, or persist the proof.
+created = await portal.create_registration_grant(
+    CreateRegistrationGrantRequest(type="EMAIL_LINK"), idempotency_key=create_key
+)
+if not created.secret_already_issued:
+    # Present registration_invitation_url once in your protected management UI.
+    # Never log or persist the URL, token, or access code.
+    pass
+delivery = await portal.deliver_registration_grant(
+    created.grant.id, RegistrationGrantDeliveryRequest("member@example.test", "LINK", "en"),
+    idempotency_key=delivery_key,
+)
+status = await portal.get_registration_grant_delivery(created.grant.id, delivery.id)
+rotated = await portal.rotate_registration_grant(
+    created.grant.id, created.grant.version, idempotency_key=rotation_key
+)
 ```
+
+Import the helpers from `axis_vertex`, including `RegistrationGrantDeliveryRequest`.
+Supply a stable, nonblank `Idempotency-Key` (at most 200 characters, no control characters)
+for each create, delivery, or rotation command. Reuse it only to recover the same command;
+the SDK never automatically retries mutations. A replay sets `secret_already_issued` and returns
+no URL, token, or access code. Rotation requires the last observed grant version. `LINK` delivers
+an `EMAIL_LINK` grant and `CODE` delivers an `ACCESS_CODE` grant. Delivery/status responses
+contain no invitation credentials. Sending and opening an invitation do not consume a registration use.
 
 ## Permission Model
 
@@ -345,3 +365,15 @@ new current-user method for the explicit safe authentication context. No unified
 BFF/transaction transport or new machine authorization API is implied.
 
 Current-account logout revokes the authenticated OAuth token/session using only the Access Token. No Direct refresh-token body or Direct login/refresh fallback is supported.
+
+## Headless Account Security
+
+Typed current-user identifier, login-method, identity-operation and MFA-operation APIs are
+available through the existing public client. See [the headless operation guide](docs/account-security.md)
+for the full method/route map, explicit proof execution, one-time material delivery, typed errors,
+idempotent creation and lost-response recovery. These are not M2M administration or browser OAuth helpers.
+
+The headless account-security guide also covers authenticated identifier-management capabilities
+and the nullable, adapter-returned LINK target presentation; neither triggers browser orchestration.
+
+The account-security guide includes the typed live recovery-code remainder read (not generation-time count). Python sync wrappers own a reusable loop/pool with explicit `close_sync()`; async handlers use `await`.

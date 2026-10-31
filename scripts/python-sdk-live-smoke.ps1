@@ -8,7 +8,7 @@ param(
     [string] $ClientId,
     [string] $ClientSecret,
     [string] $AccessToken,
-    [string] $Audience,
+    [string] $ResourceAudience,
     [string] $Issuer,
     [string] $RequiredPermission = "posts:read"
 )
@@ -109,6 +109,7 @@ try {
     Assert-Required $ClientId "ClientId"
     Assert-Required $ClientSecret "ClientSecret"
     Assert-Required $AccessToken "OAuth AccessToken"
+    Assert-Required $ResourceAudience "ResourceAudience"
 
     $script = @'
 import asyncio
@@ -118,14 +119,14 @@ from axis_vertex import IamClient, IamConfig
 
 
 async def main() -> None:
-    audience = os.environ.get("IAM_AUDIENCE") or None
+    resource_audience = os.environ["IAM_RESOURCE_AUDIENCE"]
     issuer = os.environ.get("IAM_ISSUER") or None
     iam = IamClient(
         IamConfig(
             endpoint=os.environ["IAM_ENDPOINT"],
             client_id=os.environ["IAM_CLIENT_ID"],
             client_secret=os.environ["IAM_CLIENT_SECRET"],
-            audience=audience,
+            resource_audience=resource_audience,
             issuer=issuer,
         )
     )
@@ -150,7 +151,7 @@ asyncio.run(main())
     $env:IAM_CLIENT_ID = $ClientId
     $env:IAM_CLIENT_SECRET = $ClientSecret
     $env:IAM_ACCESS_TOKEN = $AccessToken
-    $env:IAM_AUDIENCE = if ($Audience) { $Audience } else { "" }
+    $env:IAM_RESOURCE_AUDIENCE = $ResourceAudience
     $env:IAM_ISSUER = if ($Issuer) { $Issuer } else { "" }
     $env:IAM_REQUIRED_RESOURCE = $parts[0]
     $env:IAM_REQUIRED_ACTION = $parts[1]

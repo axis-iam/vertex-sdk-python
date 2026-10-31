@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import json
 from collections.abc import Awaitable, Callable
 from urllib.parse import parse_qs
 
@@ -42,6 +43,7 @@ from axis_vertex import (
     PortalOpenApiConfig,
     PortalOpenApiError,
     PortalOpenApiTokenError,
+    RegistrationGrantDeliveryRequest,
     RegistrationGrantListOptions,
     UpdateOrganizationRequest,
     UpdatePermissionRequest,
@@ -295,7 +297,9 @@ async def test_registration_grant_helpers_use_exact_scopes_and_reject_double_pro
     client = server.client()
     await client.list_registration_grants()
     with pytest.raises(PortalOpenApiError, match="Invalid registration grant response"):
-        await client.create_registration_grant(CreateRegistrationGrantRequest(type="EMAIL_LINK"))
+        await client.create_registration_grant(
+            CreateRegistrationGrantRequest(type="EMAIL_LINK"), idempotency_key="r11-create-key"
+        )
     await client.list_registration_grant_redemptions("123e4567-e89b-12d3-a456-426614174000")
     assert [scope for _grant_type, scope, _auth in server.token_requests] == [
         REGISTRATION_GRANTS_READ_SCOPE,
@@ -348,6 +352,10 @@ async def test_registration_grant_create_accepts_null_nonmatching_proof(
             201,
             json={
                 "grant": _grant(grant_type),
+                "secretAlreadyIssued": False,
+                "registrationInvitationUrl": "https://issuer.example.test/invitation?token=fake-one-time-proof"
+                if grant_type == "EMAIL_LINK"
+                else None,
                 proof_key: "fake-one-time-proof",
                 absent_key: None,
             },
@@ -356,7 +364,8 @@ async def test_registration_grant_create_accepts_null_nonmatching_proof(
     server.portal_handler = response
     client = server.client()
     created = await client.create_registration_grant(
-        CreateRegistrationGrantRequest(type=grant_type)  # type: ignore[arg-type]
+        CreateRegistrationGrantRequest(type=grant_type),  # type: ignore[arg-type]
+        idempotency_key="r11-create-key",
     )
 
     assert created.grant.type == grant_type
@@ -392,12 +401,20 @@ async def test_registration_grant_create_rejects_invalid_proof_contract_without_
 ) -> None:
     server = PortalOpenApiMock()
     server.portal_handler = lambda _request: httpx.Response(
-        201, json={"grant": _grant(grant_type), **proofs}
+        201,
+        json={
+            "grant": _grant(grant_type),
+            "secretAlreadyIssued": False,
+            "registrationInvitationUrl": "https://issuer.example.test/invitation?token=fake-token",
+            **proofs,
+        },
     )
     client = server.client()
 
     with pytest.raises(PortalOpenApiError) as exc:
-        await client.create_registration_grant(CreateRegistrationGrantRequest(type="EMAIL_LINK"))
+        await client.create_registration_grant(
+            CreateRegistrationGrantRequest(type="EMAIL_LINK"), idempotency_key="r11-create-key"
+        )
 
     assert exc.value.code == "invalid_registration_grant_response"
     assert "fake-token" not in str(exc.value)
@@ -658,9 +675,167 @@ def _page() -> dict[str, int]:
     return {"size": 20, "number": 0, "totalElements": 0, "totalPages": 0}
 
 
+@pytest.mark.asyncio
+async def test_registration_invitation_delivery_rotation_replay_and_exact_scopes() -> None:
+    server = PortalOpenApiMock()
+    grant_id = "123e4567-e89b-12d3-a456-426614174000"
+    delivery_id = "123e4567-e89b-12d3-a456-426614174001"
+
+    def response(request: httpx.Request) -> httpx.Response:
+        if request.method == "GET" or request.url.path.endswith("/deliveries"):
+            if request.method == "POST":
+                assert request.headers["Idempotency-Key"] == "delivery-key"
+                assert json.loads(request.content)["variant"] == "LINK"
+            return httpx.Response(
+                200 if request.method == "GET" else 202,
+                json={
+                    "id": delivery_id,
+                    "grantId": grant_id,
+                    "recipient": "member@example.test",
+                    "variant": "LINK",
+                    "status": "DELIVERED" if request.method == "GET" else "QUEUED",
+                    "failureCode": None,
+                    "attemptCount": 0,
+                    "maxAttempts": 3,
+                    "nextAttemptAt": None,
+                    "retryable": False,
+                    "expiresAt": "2026-11-01T00:00:00Z",
+                    "createdAt": "2026-10-31T00:00:00Z",
+                },
+            )
+        if request.url.path.endswith("/rotate"):
+            assert request.headers["Idempotency-Key"] == "rotate-key"
+            assert json.loads(request.content) == {"expectedVersion": 0}
+            return httpx.Response(
+                200,
+                json={
+                    "grant": _grant("EMAIL_LINK"),
+                    "registrationGrantToken": None,
+                    "registrationAccessCode": None,
+                    "registrationInvitationUrl": None,
+                    "secretAlreadyIssued": True,
+                },
+            )
+        assert request.headers["Idempotency-Key"] == "create-key"
+        return httpx.Response(
+            201,
+            json={
+                "grant": _grant("EMAIL_LINK"),
+                "registrationGrantToken": "fake-proof",
+                "registrationAccessCode": None,
+                "registrationInvitationUrl": "https://issuer.example.test/invitation?token=fake-proof",
+                "secretAlreadyIssued": False,
+            },
+        )
+
+    server.portal_handler = response
+    client = server.client()
+    created = await client.create_registration_grant(
+        CreateRegistrationGrantRequest(type="EMAIL_LINK"), idempotency_key="create-key"
+    )
+    assert created.registration_invitation_url is not None and created.grant.version == 0
+    sent = await client.deliver_registration_grant(
+        grant_id,
+        RegistrationGrantDeliveryRequest("member@example.test", "LINK"),
+        idempotency_key="delivery-key",
+    )
+    assert sent.status == "QUEUED"
+    replay = await client.rotate_registration_grant(grant_id, 0, idempotency_key="rotate-key")
+    assert replay.secret_already_issued and replay.registration_grant_token is None
+    assert (
+        await client.get_registration_grant_delivery(grant_id, delivery_id)
+    ).status == "DELIVERED"
+    assert [scope for _grant_type, scope, _auth in server.token_requests] == [
+        REGISTRATION_GRANTS_WRITE_SCOPE,
+        REGISTRATION_GRANTS_READ_SCOPE,
+    ]
+    await client.close()
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize("key", ["", " ", "bad\nkey", "a" * 201])
+async def test_registration_invitation_rejects_invalid_key_without_network(key: str) -> None:
+    server = PortalOpenApiMock()
+    client = server.client()
+    with pytest.raises(ValueError, match="Idempotency-Key"):
+        await client.create_registration_grant(
+            CreateRegistrationGrantRequest("EMAIL_LINK"), idempotency_key=key
+        )
+    assert not server.token_requests and not server.portal_requests
+    await client.close()
+
+
+@pytest.mark.asyncio
+async def test_registration_invitation_replay_cannot_reissue_secret() -> None:
+    server = PortalOpenApiMock()
+    server.portal_handler = lambda _request: httpx.Response(
+        201,
+        json={
+            "grant": _grant("EMAIL_LINK"),
+            "registrationGrantToken": "must-not-leak",
+            "registrationAccessCode": None,
+            "registrationInvitationUrl": None,
+            "secretAlreadyIssued": True,
+        },
+    )
+    client = server.client()
+    with pytest.raises(PortalOpenApiError) as failure:
+        await client.create_registration_grant(
+            CreateRegistrationGrantRequest("EMAIL_LINK"), idempotency_key="same-key"
+        )
+    assert failure.value.code == "invalid_registration_grant_response"
+    assert "must-not-leak" not in str(failure.value)
+    assert len(server.portal_requests) == 1
+    await client.close()
+
+
+@pytest.mark.parametrize("field", ["attemptCount", "retryable", "recipient", "expiresAt", "status"])
+@pytest.mark.asyncio
+async def test_registration_invitation_delivery_requires_current_scalars(field: str) -> None:
+    server = PortalOpenApiMock()
+    grant_id = "123e4567-e89b-12d3-a456-426614174000"
+    delivery_id = "123e4567-e89b-12d3-a456-426614174001"
+    body: dict[str, object] = {
+        "id": delivery_id,
+        "grantId": grant_id,
+        "recipient": "member@example.test",
+        "variant": "LINK",
+        "status": "QUEUED",
+        "attemptCount": 0,
+        "retryable": False,
+        "createdAt": "2026-10-31T00:00:00Z",
+        "expiresAt": "2026-11-01T00:00:00Z",
+    }
+    del body[field]
+    server.portal_handler = lambda _request: httpx.Response(200, json=body)
+    client = server.client()
+    with pytest.raises(PortalOpenApiError) as failure:
+        await client.get_registration_grant_delivery(grant_id, delivery_id)
+    assert failure.value.code == "invalid_registration_grant_response"
+    assert len(server.portal_requests) == 1
+    await client.close()
+
+
+@pytest.mark.parametrize(
+    "url", ["https://[", "javascript:alert(1)", "https://user@issuer.test/invitation"]
+)
+def test_registration_invitation_rejects_malformed_url_as_typed_error(url: str) -> None:
+    with pytest.raises(PortalOpenApiError) as failure:
+        portal_api._created_registration_grant(
+            {
+                "grant": _grant("EMAIL_LINK"),
+                "secretAlreadyIssued": False,
+                "registrationGrantToken": "fake-token",
+                "registrationInvitationUrl": url,
+            }
+        )
+    assert failure.value.code == "invalid_registration_grant_response"
+
+
 def _grant(grant_type: str) -> dict[str, object]:
     return {
         "id": "123e4567-e89b-12d3-a456-426614174000",
+        "version": 0,
         "type": grant_type,
         "status": "ACTIVE",
         "displayName": None,
