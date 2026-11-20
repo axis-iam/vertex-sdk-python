@@ -1,0 +1,187 @@
+{
+  "version": "connected-app-bff-c0/1.0.1",
+  "sourceHead": "e1aac5502e906aac8605c654dcb8984862a5202b",
+  "records": [
+    {
+      "source": "iam-domain/src/main/java/com/chaosguide/iam/domain/config/policy/DefaultLogin.java",
+      "record": "DefaultLogin",
+      "components": [
+        "String identifierKind",
+        "String method"
+      ],
+      "nullable": []
+    },
+    {
+      "source": "iam-domain/src/main/java/com/chaosguide/iam/domain/config/policy/restriction/IdentifierRestrictions.java",
+      "record": "IdentifierRestrictions",
+      "components": [
+        "Purpose signup",
+        "Purpose login"
+      ],
+      "nullable": []
+    },
+    {
+      "source": "iam-domain/src/main/java/com/chaosguide/iam/domain/config/policy/restriction/IdentifierRestrictions.java",
+      "record": "Email",
+      "components": [
+        "boolean restricted"
+      ],
+      "nullable": []
+    },
+    {
+      "source": "iam-domain/src/main/java/com/chaosguide/iam/domain/config/policy/restriction/IdentifierRestrictions.java",
+      "record": "Phone",
+      "components": [
+        "boolean restricted",
+        "List<String> allowedRegions"
+      ],
+      "nullable": [
+        "allowedRegions"
+      ]
+    },
+    {
+      "source": "iam-domain/src/main/java/com/chaosguide/iam/domain/config/policy/restriction/IdentifierRestrictions.java",
+      "record": "Purpose",
+      "components": [
+        "Email email",
+        "Phone phone"
+      ],
+      "nullable": []
+    },
+    {
+      "source": "iam-server/src/main/java/com/chaosguide/iam/server/api/dto/capability/AuthMethodAvailabilityResponse.java",
+      "record": "AuthMethodAvailabilityResponse",
+      "components": [
+        "AuthMethodType type",
+        "boolean enabled",
+        "boolean configured",
+        "boolean availableForLogin",
+        "boolean availableForSignup",
+        "String unavailableReason"
+      ],
+      "nullable": [
+        "unavailableReason"
+      ]
+    },
+    {
+      "source": "iam-server/src/main/java/com/chaosguide/iam/server/api/dto/capability/AuthMethodIdpProviderResponse.java",
+      "record": "AuthMethodIdpProviderResponse",
+      "components": [
+        "UUID id",
+        "String providerType",
+        "String displayName",
+        "boolean enabled",
+        "boolean configured",
+        "boolean clickable",
+        "boolean availableForLogin",
+        "boolean availableForSignup",
+        "String unavailableReason",
+        "String authorizationUrl"
+      ],
+      "nullable": [
+        "unavailableReason",
+        "authorizationUrl"
+      ]
+    },
+    {
+      "source": "iam-server/src/main/java/com/chaosguide/iam/server/api/dto/capability/AuthMethodsPublicResponse.java",
+      "record": "AuthMethodsPublicResponse",
+      "components": [
+        "String clientId",
+        "boolean passwordLoginEnabled",
+        "boolean emailMagicLinkEnabled",
+        "boolean emailOtpEnabled",
+        "boolean smsOtpEnabled",
+        "boolean socialLoginEnabled",
+        "boolean signupEnabled",
+        "boolean selfRegistrationEnabled",
+        "boolean smsAutoProvisioningEnabled",
+        "boolean idpAutoProvisioningEnabled",
+        "String loginInitiationUri",
+        "String postVerificationRedirectUri",
+        "List<AuthMethodAvailabilityResponse> methods",
+        "List<AuthMethodIdpProviderResponse> idpProviders",
+        "ResendMetadata resend",
+        "List<LoginIdentifierCapabilities.IdentifierMethod> identifierMethods",
+        "UserIdentifierKind defaultIdentifierKind",
+        "DefaultLogin defaultLogin",
+        "List<UserIdentifierKind> allowedSignupIdentifierKinds",
+        "List<UserIdentifierKind> allowedPasswordIdentifierKinds",
+        "IdentifierRestrictions identifierRestrictions"
+      ],
+      "nullable": [
+        "loginInitiationUri",
+        "postVerificationRedirectUri",
+        "defaultIdentifierKind",
+        "defaultLogin"
+      ]
+    },
+    {
+      "source": "iam-server/src/main/java/com/chaosguide/iam/server/api/dto/capability/AuthMethodsPublicResponse.java",
+      "record": "ResendMetadata",
+      "components": [
+        "int emailVerificationCooldownSeconds"
+      ],
+      "nullable": []
+    },
+    {
+      "source": "iam-server/src/main/java/com/chaosguide/iam/server/api/dto/capability/AuthPolicyPublicResponse.java",
+      "record": "AuthPolicyPublicResponse",
+      "components": [
+        "boolean passwordLoginEnabled",
+        "boolean emailMagicLinkEnabled",
+        "boolean emailOtpEnabled",
+        "boolean smsOtpEnabled",
+        "boolean socialLoginEnabled",
+        "int minPasswordLength",
+        "boolean requireUppercase",
+        "boolean requireLowercase",
+        "boolean requireDigit",
+        "boolean requireSpecialChar",
+        "boolean breachedPasswordCheck",
+        "boolean totpEnabled",
+        "boolean webauthnEnabled",
+        "String mfaEnforcement",
+        "boolean stepUpEnabled",
+        "List<String> stepUpTriggers",
+        "int deviceTrustDays",
+        "int maxTrustedDevices",
+        "int maxLoginAttempts",
+        "int lockoutDurationMinutes",
+        "boolean progressiveLockout",
+        "boolean smsAutoProvisioningEnabled",
+        "boolean idpAutoProvisioningEnabled",
+        "String signupMode",
+        "List<String> allowedRegistrationGrantTypes",
+        "DefaultLogin defaultLogin",
+        "List<String> allowedSignupIdentifierKinds",
+        "List<String> allowedPasswordIdentifierKinds",
+        "IdentifierRestrictions identifierRestrictions"
+      ],
+      "nullable": []
+    },
+    {
+      "source": "iam-server/src/main/java/com/chaosguide/iam/server/authmethods/LoginIdentifierCapabilities.java",
+      "record": "IdentifierMethod",
+      "components": [
+        "UserIdentifierKind kind",
+        "List<AuthMethodType> methods"
+      ],
+      "nullable": []
+    }
+  ],
+  "enumValues": {
+    "AuthMethodType": [
+      "PASSWORD",
+      "EMAIL_MAGIC_LINK",
+      "EMAIL_OTP",
+      "SMS_OTP",
+      "SOCIAL"
+    ],
+    "UserIdentifierKind": [
+      "EMAIL",
+      "USERNAME",
+      "PHONE"
+    ]
+  }
+}

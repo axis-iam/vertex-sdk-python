@@ -1,0 +1,9 @@
+{
+  "version": "connected-app-bff-c0/1.0.1",
+  "sourceHead": "e1aac5502e906aac8605c654dcb8984862a5202b",
+  "files": {
+    "docs/guides/connected-app-bff-contract.md": "b418282363ce652b61c6997d060d32b3f0822d5a78b3f302b0cf32961ea708c7",
+    "iam-server/src/test/resources/connected-app-bff/c0-v1.json": "ea03a74a6a623533bd8b9ad67b9a63b79bfd6ba00f24e9b6549d0541be08985e",
+    "iam-server/src/test/resources/connected-app-bff/wire-records.json": "bbdb6ca90072300b07432ff22d1fc1ef4e1bfb23c48eb3491c328df7e49deebf"
+  }
+}

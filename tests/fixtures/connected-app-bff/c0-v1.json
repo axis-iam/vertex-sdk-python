@@ -1,0 +1,879 @@
+{
+  "version": "connected-app-bff-c0/1.0.1",
+  "sourceHead": "e1aac5502e906aac8605c654dcb8984862a5202b",
+  "classification": "SOURCE_CONFIRMED_AND_SDK_REQUIRED_NOT_RUNTIME_CERTIFIED",
+  "viewVectors": [
+    {
+      "id": "view-authenticated",
+      "accept": true,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        }
+      }
+    },
+    {
+      "id": "view-prelogin",
+      "accept": true,
+      "value": {
+        "state": "PRELOGIN",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc"
+      }
+    },
+    {
+      "id": "view-proof-complete-not-session",
+      "accept": true,
+      "authenticated": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "nextAction": "complete"
+      }
+    },
+    {
+      "id": "view-deny-token-leak",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        },
+        "access_token": "forbidden"
+      }
+    },
+    {
+      "id": "view-deny-missing-profile",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        }
+      }
+    },
+    {
+      "id": "view-deny-csrf-length",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "short",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        }
+      }
+    },
+    {
+      "id": "view-deny-owner-missing",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        }
+      }
+    },
+    {
+      "id": "view-deny-invalid-time",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "later",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        }
+      }
+    },
+    {
+      "id": "view-deny-version-negative",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": -1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        }
+      }
+    },
+    {
+      "id": "view-deny-context-mismatch",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ],
+          "applicationId": "other",
+          "organizationId": null
+        }
+      }
+    },
+    {
+      "id": "view-deny-profile-required-null",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        }
+      }
+    },
+    {
+      "id": "view-deny-permission-failure",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "USER",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": null
+      }
+    },
+    {
+      "id": "view-deny-wrong-subject",
+      "accept": false,
+      "value": {
+        "state": "AUTHENTICATED",
+        "expiresAt": "2026-11-19T02:00:00Z",
+        "csrfToken": "ccccccccccccccccccccccccccccccccccccccccccc",
+        "owner": "ooooooooooooooooooooooooooooooooooooooooooo",
+        "version": 1,
+        "profile": {
+          "id": "019b0000-0000-7000-8000-000000000002",
+          "email": "reader@example.test",
+          "username": null,
+          "status": "ACTIVE",
+          "emailVerified": true,
+          "authenticationContext": {
+            "subjectType": "CLIENT",
+            "applicationId": "019b0000-0000-7000-8000-000000000001",
+            "clientId": "connected-web",
+            "sessionId": "session-one",
+            "workspaceId": null,
+            "workspaceSelectionRequired": false,
+            "organizationId": null,
+            "organizationSlug": null,
+            "organizationRole": null,
+            "authTime": "2026-11-19T01:00:00Z",
+            "authenticationMethods": [
+              "PASSWORD"
+            ],
+            "assuranceLevel": "urn:iam:acr:password",
+            "impersonation": null
+          },
+          "metadata": {}
+        },
+        "permissions": {
+          "roles": [
+            "reader"
+          ],
+          "permissions": [
+            "documents:read"
+          ]
+        }
+      }
+    }
+  ],
+  "scenarioVectors": [
+    {
+      "id": "callback-once",
+      "steps": [
+        "bind prelogin cookie/state/verifier/nonce",
+        "consume callback",
+        "exchange",
+        "repeat same callback"
+      ],
+      "expected": "one token request; repeat denied",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "callback-missing-binding",
+      "steps": [
+        "callback code/state without prelogin cookie"
+      ],
+      "expected": "deny before exchange",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "callback-provider-continuation",
+      "steps": [
+        "bound kind AUTH_CONTINUATION/auth_transaction_id/state",
+        "read controlled transaction MFA_REQUIRED"
+      ],
+      "expected": "safe MFA view; no exchange",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "callback-provider-code",
+      "steps": [
+        "bound custom provider code/state"
+      ],
+      "expected": "backend exchange; no code in browser JSON",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "callback-denied",
+      "steps": [
+        "bound error access_denied/state"
+      ],
+      "expected": "terminate prelogin; no authenticated view",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "callback-magic-fragment",
+      "steps": [
+        "AUTH_PROOF/EMAIL_MAGIC_LINK fragment",
+        "clear fragment",
+        "bound CSRF magic POST"
+      ],
+      "expected": "exact transaction/identifier/state; consume proof once",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "callback-mixed-parameters",
+      "steps": [
+        "code and AUTH_CONTINUATION or duplicate state"
+      ],
+      "expected": "deny before exchange",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "refresh-single-owner",
+      "steps": [
+        "two instances read same generation",
+        "both acquire refresh"
+      ],
+      "expected": "one SEND_INTENT and one HTTP request",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "refresh-crash-after-intent",
+      "steps": [
+        "persist SEND_INTENT",
+        "crash",
+        "lease expires"
+      ],
+      "expected": "invalidate; never replay previous RT",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "refresh-before-send-unavailable",
+      "steps": [
+        "acquire",
+        "known failure before intent/send"
+      ],
+      "expected": "503; release safely; preserve identity",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "refresh-sent-timeout",
+      "steps": [
+        "SEND_INTENT",
+        "timeout or lost response"
+      ],
+      "expected": "401 REFRESH_UNCERTAIN; invalidate; no retry",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "refresh-commit-failed",
+      "steps": [
+        "SEND_INTENT",
+        "new tokens received",
+        "provider commit unavailable"
+      ],
+      "expected": "invalidate/fence old snapshot; no old RT continuation",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "logout-late-refresh",
+      "steps": [
+        "refresh owns generation",
+        "logout invalidates",
+        "refresh commit"
+      ],
+      "expected": "commit conflict; no resurrection",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "framework-auto-save",
+      "steps": [
+        "request A reads session",
+        "request B logs out",
+        "A automatic save/touch"
+      ],
+      "expected": "SDK authentication remains invalid; unrelated fields preserved",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "framework-user-switch",
+      "steps": [
+        "request A old identity",
+        "logout A/login B",
+        "A response/save arrives"
+      ],
+      "expected": "reject A generation; B remains identity",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "store-read-failure",
+      "steps": [
+        "provider unavailable"
+      ],
+      "expected": "503 SESSION_STORE_UNAVAILABLE; not anonymous/empty permissions",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "validity-dependency-failure",
+      "steps": [
+        "IAM validity 503"
+      ],
+      "expected": "503 IAM_UNAVAILABLE; no false revocation",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "validity-revoked",
+      "steps": [
+        "IAM validity confirms 401"
+      ],
+      "expected": "local invalidate; 401 SESSION_INVALIDATED",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "no-rt-expired",
+      "steps": [
+        "client/scope does not issue RT",
+        "AT expires"
+      ],
+      "expected": "new authorization; no refresh or fabricated token",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "logout-valid-at-rt",
+      "steps": [
+        "local invalidate",
+        "POST IAM logout with owned RT"
+      ],
+      "expected": "SESSION_REVOKED; current AT/session/family",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "logout-valid-at-no-rt",
+      "steps": [
+        "local invalidate",
+        "POST IAM logout {}"
+      ],
+      "expected": "SESSION_REVOKED; current AT/session only",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "logout-expired-at-rt",
+      "steps": [
+        "local invalidate",
+        "POST revoke with client Basic"
+      ],
+      "expected": "REFRESH_FAMILY_REVOKED; IAM session still present",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "logout-expired-at-no-rt",
+      "steps": [
+        "local invalidate",
+        "no usable remote credential"
+      ],
+      "expected": "remote NOT_ATTEMPTED; never refresh for logout",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "logout-already-revoked",
+      "steps": [
+        "POST revoke unknown/revoked RT"
+      ],
+      "expected": "200 protocol result; no expanded session claim",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "logout-remote-unavailable",
+      "steps": [
+        "local invalidate succeeds",
+        "remote timeout"
+      ],
+      "expected": "local INVALIDATED cookie CLEARED remote UNCONFIRMED",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "logout-local-failure",
+      "steps": [
+        "provider invalidate unavailable",
+        "clear cookie"
+      ],
+      "expected": "503 local UNCONFIRMED; do not claim full logout",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "csrf-post",
+      "steps": [
+        "anonymous or authenticated POST with wrong origin/token"
+      ],
+      "expected": "403 before IAM write",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "hosted-get",
+      "steps": [
+        "top-level GET login and callback without custom header"
+      ],
+      "expected": "prelogin binding validates; navigation can succeed",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "storage-missing",
+      "steps": [
+        "server_session configured without provider"
+      ],
+      "expected": "configuration failure; no automatic memory fallback",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "memory-capacity",
+      "steps": [
+        "purge expired",
+        "capacity still full"
+      ],
+      "expected": "503 SESSION_STORE_CAPACITY; active records retained",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "memory-restart",
+      "steps": [
+        "login",
+        "provider closed/recreated"
+      ],
+      "expected": "records absent; new authorization; no IAM revocation claim",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "memory-multiprocess",
+      "steps": [
+        "memory configured with replicas or workers >1"
+      ],
+      "expected": "configuration rejected",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "memory-isolated-copies",
+      "steps": [
+        "read snapshot",
+        "mutate returned value"
+      ],
+      "expected": "stored state unchanged",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "memory-ttl-close",
+      "steps": [
+        "deadline elapsed",
+        "cleanup",
+        "close",
+        "read/write"
+      ],
+      "expected": "expired absent; closed operations typed CLOSED",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "permission-deny",
+      "steps": [
+        "authenticated user lacks exact/resource/global permission"
+      ],
+      "expected": "403; session retained",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "purpose-separation",
+      "steps": [
+        "registration/reset/identity-change proof sent to normal login"
+      ],
+      "expected": "reject; no ordinary authenticated session",
+      "owner": "SDK_REQUIRED"
+    },
+    {
+      "id": "hosted-login-missing-prelogin",
+      "steps": [
+        "GET host login without valid bootstrap Cookie"
+      ],
+      "expected": "reject before IAM navigation; no new authenticated identity",
+      "owner": "SDK_REQUIRED"
+    }
+  ],
+  "defaults": {
+    "preloginTtlSeconds": 600,
+    "terminalResultTtlSeconds": 60,
+    "sessionAbsoluteCapSeconds": 3600,
+    "sessionIdleCapSeconds": 3600,
+    "refreshLeaseSeconds": 15,
+    "cleanupSeconds": 60,
+    "maxSessions": 10000,
+    "maxPrelogins": 1000,
+    "maxRecordBytes": 65536,
+    "upstreamTimeoutSeconds": 5,
+    "requestAuthBudgetSeconds": 10,
+    "refreshSkewSeconds": 30,
+    "tokenRetries": 0
+  },
+  "errorVectors": [
+    {
+      "id": "business-invalid-value",
+      "status": 400,
+      "body": {
+        "status": 400,
+        "error": "BAD_REQUEST",
+        "message": "Invalid authorization request",
+        "timestamp": "2026-11-19T01:00:00Z",
+        "details": {}
+      },
+      "decision": "reject request; no invented successful state"
+    },
+    {
+      "id": "strict-validation",
+      "status": 400,
+      "body": {
+        "status": 400,
+        "error": "VALIDATION_ERROR",
+        "message": "Validation failed",
+        "timestamp": "2026-11-19T01:00:00Z",
+        "details": {}
+      },
+      "decision": "reject unknown fields"
+    },
+    {
+      "id": "oauth-invalid-grant",
+      "status": 400,
+      "body": {
+        "error": "invalid_grant"
+      },
+      "decision": "terminate exchange/refresh; no retry"
+    },
+    {
+      "id": "oauth-invalid-client",
+      "status": 401,
+      "body": {
+        "error": "invalid_client"
+      },
+      "decision": "configuration/authentication failure; no anonymous success"
+    },
+    {
+      "id": "revocation-unavailable",
+      "status": 503,
+      "body": {
+        "status": 503,
+        "error": "TOKEN_REVOCATION_UNAVAILABLE",
+        "message": "Token revocation is temporarily unavailable",
+        "timestamp": "2026-11-19T01:00:00Z",
+        "details": {}
+      },
+      "decision": "remote unconfirmed; local logout independent"
+    }
+  ]
+}

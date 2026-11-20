@@ -5,8 +5,9 @@ Server-side Python SDK for Axis Vertex resource APIs. The package distribution i
 
 This SDK verifies Axis Vertex-issued access tokens, resolves `roles -> permissions` at
 runtime, exposes request-local user context, and provides FastAPI/Django guards.
-It does not implement browser login, Google/GitHub provider UI, OAuth callbacks,
-Portal/Admin management APIs, or browser token storage.
+Optional `server_session` supports Hosted/custom OAuth callbacks in FastAPI and Django.
+See [server-session setup](docs/server-session.md) and the two BFF examples.
+Browser UI and browser token storage remain outside this Python package.
 
 ## Permission manifest synchronization
 
@@ -36,8 +37,8 @@ confidential ApplicationClient for Python server APIs.
 - `resource_audience` is `Application.resourceAudience`, for example `api://socratiq`. Resource servers use it to verify access-token `aud`.
 - `IamConfig` accepts only `resource_audience`; the former `audience` configuration keyword is not supported. Missing resource audience fails at construction, and `client_id` is never used as its fallback.
 - SPA/NATIVE public clients have no secret and must not be used by this server SDK.
-- Browser login and embedded provider selection belong to `sdk-js`.
-- If a Python WEB application implements interactive Authorization Code login itself, Axis Vertex requires both confidential client authentication at token exchange and S256 PKCE (`code_challenge_method=S256` plus matching `code_verifier`). Store OAuth `state` and the PKCE verifier server-side; this SDK does not provide a browser login/callback helper.
+- Browser UI and embedded provider selection belong to `sdk-js`; optional Python BFF routes keep tokens on the backend.
+- If a Python WEB application implements interactive Authorization Code login itself, Axis Vertex requires both confidential client authentication at token exchange and S256 PKCE (`code_challenge_method=S256` plus matching `code_verifier`). The optional `axis_vertex.web_session` core stores state/verifier server-side and provides explicit framework callback wiring.
 
 ## Install
 
